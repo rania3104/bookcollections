@@ -101,6 +101,14 @@ header {
     display: flex;
     position: relative;
     background-color: #9AC2C6;
+    overflow: hidden;
+}
+
+.canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    pointer-events: none;
 }
 .image-section2 {
     display: flex;
@@ -692,3 +700,4 @@ nav a:not(.active):hover::after {
 .visible {
     opacity: 1;
 }
+

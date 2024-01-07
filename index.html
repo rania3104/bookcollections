@@ -35,7 +35,7 @@
         </div>
     </header>
 
-    <div class="image-section">
+    <div class="image-section" onmousemove="draw(event)">
         <img src="bookstore-image1.png" alt="Bookstore Image">
         <div class="text-content">
             <h1>Fauget Store</h1>
@@ -267,6 +267,45 @@
     </footer>
     <script src="scripts.js"></script>
     <script>    
+        function draw(e) {
+            const canvas = document.createElement('div');
+            canvas.className = 'canvas';
+
+            const xPos = e.clientX;
+            const yPos = e.clientY;
+
+            canvas.style.width = '40px';
+            canvas.style.height = '40px';
+            canvas.style.borderRadius = '50%';
+            canvas.style.opacity=0.4;
+            canvas.style.position = 'absolute';
+            canvas.style.top = `${yPos - 30}px`;
+            canvas.style.left = `${xPos - 20}px`;
+            canvas.style.transition = 'all 0.3s ease-out';
+
+            const randomColor = getRandomColor();
+            canvas.style.background = randomColor;
+
+            document.body.appendChild(canvas);
+
+            setTimeout(() => {
+                canvas.style.transform = 'scale(0)';
+            }, 10);
+
+            setTimeout(() => {
+                document.body.removeChild(canvas);
+            }, 310);
+        }
+
+        function getRandomColor() {
+            const letters = '0123456789ABCDEF';
+            let color = '#';
+            for (let i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
+            }
+            return color;
+        }
+
 
     </script>
 </body>
