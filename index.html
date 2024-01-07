@@ -1,0 +1,273 @@
+<!-- index.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"><!--To import the icons in the footer-->
+
+    <title>Bookstore</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <div class="top-bar">
+            <div class="logo-container">
+                <img src="bookstore-logo.png" alt="Bookstore Logo">
+            </div>
+            <div class="search-bar">
+                <input type="text" placeholder=" Search books, authors, reviews and more">
+            </div>
+            <div class="right-section">
+                <nav>
+                    <ul>
+                        <li><a href="index.html" class="active">Home</a></li>
+                        <li><a href="explore.html">Explore</a></li>
+                        <li><a href="#bookstores">Bookstores</a></li>
+                    </ul>
+                </nav>
+                <a href="signin.html">Sign In</a>
+                <a href="cart.html"><img src="cart-icon.png" alt="Cart"></a>
+            </div>
+        </div>
+    </header>
+
+    <div class="image-section">
+        <img src="bookstore-image1.png" alt="Bookstore Image">
+        <div class="text-content">
+            <h1>Fauget Store</h1>
+            <h3>Up to 50% off on all fiction books!</h3>
+            <button class="visit-store-btn">Visit Store</button>
+        </div>
+        <img src="bookstore-image2.png" alt="Bookstore Image">
+    </div>
+
+
+    <section id="latest-books">
+        <h2>Latest Books</h2>
+        <div class="book-scroller">
+            <div class="book">
+                <img src="book1.jpg" alt="Book 1">
+                <h3>Normal People</h3>
+                <p>Sally Rooney</p>
+                <div class="add-to-cart">
+                    <button>Add to Cart</button>
+                </div>
+            </div>
+            <div class="book">
+                <img src="book2.jpg" alt="Book 2">
+                <h3>The Light Behind The Garden Wall</h3>
+                <p>Scott Whitehead</p>
+                <div class="add-to-cart">
+                    <button>Add to Cart</button>
+                </div>
+            </div>
+            <div class="book">
+                <img src="book3.jpg" alt="Book 3">
+                <h3>After She Left</h3>
+                <p>Penelope Hanley</p>
+                <div class="add-to-cart">
+                    <button>Add to Cart</button>
+                </div>
+            </div>
+            <div class="book">
+                <img src="book4.jpg" alt="Book 4">
+                <h3>Atomic Love</h3>
+                <p>Selena Walls</p>
+                <div class="add-to-cart">
+                    <button>Add to Cart</button>
+                </div>
+            </div>
+            <div class="book">
+                <img src="book5.jpg" alt="Book 5">
+                <h3>Memory</h3>
+                <p>Angelina Aludo</p>
+                <div class="add-to-cart">
+                    <button>Add to Cart</button>
+                </div>
+            </div>
+            <div class="book">
+                <img src="book6.png" alt="Book 6">
+                <h3>Bigger & Better</h3>
+                <p>Kevin Lee</p>
+                <div class="add-to-cart">
+                    <button>Add to Cart</button>
+                </div>
+            </div>
+            <div class="book">
+                <img src="book7.jpg" alt="Book 7">
+                <h3>The Night She Disappeared</h3>
+                <p>Lisa Jewell</p>
+                <div class="add-to-cart">
+                    <button>Add to Cart</button>
+                </div>
+            </div>
+            <div class="book">
+                <img src="book8.jpg" alt="Book 8">
+                <h3>The Silent Patient</h3>
+                <p>Alex Michaelides</p>
+                <div class="add-to-cart">
+                    <button>Add to Cart</button>
+                </div>
+            </div>
+        </div>
+        
+    </section>
+
+    <section id="explore">
+        <h2 class="fade-in">Explore More Books</h2>
+        <div class="book-scroller fade-in">
+            <div class="book">
+                <img src="book9.jpg" alt="Book 1">
+                <h3>Harry Potter And The Deathly Hallows</h3>
+                <p>J.K. Rowling</p>
+                <div class="add-to-cart">
+                    <button>Add to Cart</button>
+                </div>
+            </div>
+            <div class="book">
+                <img src="book12.jpg" alt="Book 2">
+                <h3>Beyond the Wand</h3>
+                <p>Tom Felton</p>
+                <div class="add-to-cart">
+                    <button>Add to Cart</button>
+                </div>
+            </div>
+            <div class="book">
+                <img src="book16.jpg" alt="Book 3">
+                <h3>Letters To The Lost</h3>
+                <p>Bridgit Kemmerer</p>
+                <div class="add-to-cart">
+                    <button>Add to Cart</button>
+                </div>
+            </div>
+            <div class="book">
+                <img src="book11.jpg" alt="Book 4">
+                <h3>A Good Girl's Guide To Murder</h3>
+                <p>Holly Jackson</p>
+                <div class="add-to-cart">
+                    <button>Add to Cart</button>
+                </div>
+            </div>
+            <div class="book">
+                <img src="book13.jpg" alt="Book 5">
+                <h3>Madly, Deeply: The Alan Rickman Diaries</h3>
+                <p>Alan Rickman</p>
+                <div class="add-to-cart">
+                    <button>Add to Cart</button>
+                </div>
+            </div>
+            <div class="book">
+                <img src="book14.jpg" alt="Book 6">
+                <h3>A Thousand Splendid Suns</h3>
+                <p>Khaled Hosseini</p>
+                <div class="add-to-cart">
+                    <button>Add to Cart</button>
+                </div>
+            </div>
+            <div class="book">
+                <img src="book10.jpg" alt="Book 7">
+                <h3>Holly</h3>
+                <p>Stephen King</p>
+                <div class="add-to-cart">
+                    <button>Add to Cart</button>
+                </div>
+            </div>
+            <div class="book">
+                <img src="book15.jpg" alt="Book 8">
+                <h3>Traitors Gate</h3>
+                <p>Jeffrey Archer</p>
+                <div class="add-to-cart">
+                    <button>Add to Cart</button>
+                </div>
+            </div>
+        </div>
+        <div class="explore-more-container fade-in">
+            <button class="explore-more-btn"><a href="explore.html">Explore More</a></button>
+        </div>
+    </section>
+    <section id="bookstores">
+        <h2 class="fade-in">Local Bookstores</h2>
+        <div class="bookstore-scroller fade-in">
+            <!-- Add bookstore items similar to the book scroller -->
+            <div class="bookstore">
+                <img src="bookstore1.jpg" alt="Bookstore 1">
+                <h3>CoolBook Bookstore</h3>
+            </div>
+            <div class="bookstore">
+                <img src="bookstore2.jpg" alt="Bookstore 2">
+                <h3>Word Bookstore</h3>
+            </div>
+            <div class="bookstore">
+                <img src="bookstore3.png" alt="Bookstore 1">
+                <h3>The Story Shop</h3>
+            </div>
+            <div class="bookstore">
+                <img src="bookstore4.png" alt="Bookstore 2">
+                <h3>Box Of Books</h3>
+            </div>
+            <div class="bookstore">
+                <img src="bookstore5.png" alt="Bookstore 1">
+                <h3>Mouse & Bear Books</h3>
+            </div>
+            <div class="bookstore">
+                <img src="bookstore6.jpg" alt="Bookstore 2">
+                <h3>Booke Bookstore</h3>
+            </div>
+        </div>
+        <div class="explore-more-container fade-in">
+            <button class="explore-more-btn"><a href="explore.html">Explore More</a></button>
+        </div>
+    </section>
+    
+
+    <div class="image-section2">
+        <img src="hp1.png" alt="Bookstore Image" class="hpimage fade-in">
+        <div class="text2 fade-in">
+            <h1 class="fade-in">Harry Potter Box Set</h1>
+            <h3 class="fade-in">Only for 199.99 AED on Bookmania Store!</h3>
+            <button class="visit-store-btn fade-in">Visit Store</button>
+        </div>
+        <img src="hp2.png" alt="Bookstore Image" class="hpimage fade-in">
+
+    </div>
+    <div class="newsletter-section">
+        <div class="newsletter-image">
+            <img src="newsletter-image.jpeg" alt="Newsletter Image">
+        </div>
+        <div class="newsletter-container">
+            <h2 class="fade-in">Sign up for our newsletter</h2>
+            <p class="fade-in">Get the latest updates on new releases, promotions, and more.</p>
+            <form class="newsletter-form fade-in">
+                <input type="email" placeholder="Your email address" required>
+                <button type="submit">Subscribe</button>
+            </form>
+        </div>
+    </div>
+    <a href="#" class="back-to-top"><i class="fas fa-arrow-up"></i></a><!--This link is for displaying a back to the top button-->
+
+    <!-- Footer -->
+    <footer>
+      <div class="footer-content">
+        <div class="social-media"><!--The links of the official social media pages are linked to the classes of icons imported from FOnt Awesome Library-->
+          <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a><!--the class refers to the icons form the library-->
+          <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+        </div>
+        <p>&copy; 2023 Book Collections. All rights reserved.<br>&copy; Rania Aziz Farooqi </p><!--The copyright-->
+  
+        <div class="contact-info">
+          <p>Phone: +1 123-456-7890</p>
+        </div>
+      </div>
+    </footer>
+    <script src="scripts.js"></script>
+    <script>    
+
+    </script>
+</body>
+</html>

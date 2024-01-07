@@ -1,0 +1,125 @@
+<!-- cart.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
+    <title>Shopping Cart</title>
+</head>
+<body>
+
+    <!-- Common Header -->
+    <header>
+        <div class="top-bar">
+            <div class="logo-container">
+                <img src="bookstore-logo.png" alt="Bookstore Logo">
+            </div>
+            <div class="search-bar">
+                <input type="text" placeholder=" Search books, authors, reviews and more">
+            </div>
+            <div class="right-section">
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="explore.html">Explore</a></li>
+                        <li><a href="#bookstores">Bookstores</a></li>
+                    </ul>
+                </nav>
+                <a href="signin.html">Sign In</a>
+                <a href="cart.html"><img src="cart-icon.png" alt="Cart"></a>
+            </div>
+        </div>
+    </header>
+
+    <div class="cart-page">
+        <h2>Your Shopping Cart</h2>
+        <div class="cart-items">
+            <div class="cart-item">
+                <img src="book9.jpg" alt="Book 1">
+                <div class="cart-item-details">
+                    <h3>Harry Potter And The Deathly Hallows</h3>
+                    <p>J.K. Rowling - Fauget Store</p>
+                    <p>Price: 50 AED</p>
+                </div>
+            </div>
+            <div class="cart-item">
+                <img src="book12.jpg" alt="Book 2">
+                <div class="cart-item-details">
+                    <h3>Beyond the Wand</h3>
+                    <p>Tom Felton - Fauget Store</p>
+                    <p>Price: 35 AED</p>
+                </div>
+            </div>
+            
+            <div class="cart-item">
+                <img src="book16.jpg" alt="Book 3">
+                <div class="cart-item-details">
+                    <h3>Letters To The Lost</h3>
+                    <p>Bridgit Kemmerer - Explore Books</p>
+                    <p>Price: 45 AED</p>
+                </div>
+            </div>
+            
+            <div class="cart-item">
+                <img src="book11.jpg" alt="Book 4">
+                <div class="cart-item-details">
+                    <h3>A Good Girl's Guide To Murder</h3>
+                    <p>Holly Jackson - Explore Books</p>
+                    <p>Price: 30 AED</p>
+                </div>
+            </div>
+            
+            <div class="cart-item">
+                <img src="book13.jpg" alt="Book 5">
+                <div class="cart-item-details">
+                    <h3>Madly, Deeply: The Alan Rickman Diaries</h3>
+                    <p>Alan Rickman - Explore Books</p>
+                    <p>Price: 55 AED</p>
+                </div>
+            </div>
+            
+            <div class="cart-item">
+                <img src="book14.jpg" alt="Book 6">
+                <div class="cart-item-details">
+                    <h3>A Thousand Splendid Suns</h3>
+                    <p>Khaled Hosseini - Local Bookstore</p>
+                    <p>Price: 40 AED</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="cart-summary">
+            <h3>Order Summary</h3>
+            <p>Total Items: 6</p>
+            <p>Subtotal: 255 AED</p>
+            <p>Get a free bookmark and a bookish item for purchases over 100 AED.</p>
+            <button class="checkout-btn">Proceed to Checkout</button>
+        </div>
+    </div>
+
+    <!-- Common Footer -->
+    <footer>
+        <div class="footer-content">
+          <div class="social-media"><!--The links of the official social media pages are linked to the classes of icons imported from FOnt Awesome Library-->
+            <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a><!--the class refers to the icons form the library-->
+            <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+          </div>
+          <p>&copy; 2023 Book Collections. All rights reserved.<br>&copy; Rania Aziz Farooqi </p><!--The copyright-->
+    
+          <div class="contact-info">
+            <p>Phone: +1 123-456-7890</p>
+          </div>
+        </div>
+      </footer>
+
+    <!-- Back-to-Top Button -->
+    <a href="#" class="back-to-top"><i class="fas fa-arrow-up"></i></a>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
