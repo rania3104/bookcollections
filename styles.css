@@ -732,3 +732,39 @@ nav a:not(.active):hover::after {
     height: auto; /* Maintain the aspect ratio */
     border-radius: 50%; /* Make the image itself a circle */
 }
+
+/* Add or modify styles as needed */
+.bookstore-section {
+    display: flex;
+    overflow: hidden;
+    background-color: #000000;
+    padding: 20px;
+    margin: 20px 50px;
+    border-radius: 15px;
+    background-image: linear-gradient(
+        to bottom, #3d3d3d 40%, transparent  
+    );
+    transition: transform 0.3s ease-out;
+}
+
+.bookstore-section:hover {
+    transform: scale(1.05);
+}
+
+.bookstore-info {
+    flex: 1;
+    color: white;
+}
+
+.bookstore-images {
+    display: flex;
+    align-items: center;
+}
+
+.bookstore-images img {
+    width: 150px;
+    height: 200px;
+    object-fit: cover;
+    margin-right: 20px;
+    border-radius: 10px;
+}

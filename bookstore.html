@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
+    <title>Bookstores Near You</title>
+</head>
+<body>
+
+    <!-- Common Header -->
+    <header>
+        <div class="top-bar">
+            <div class="logo-container">
+                <img src="bookstore-logo.png" alt="Bookstore Logo">
+            </div>
+            <div class="search-bar">
+                <input type="text" placeholder=" Search books, authors, reviews and more">
+            </div>
+            <div class="right-section">
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="explore.html">Explore</a></li>
+                        <li><a href="bookstore.html"  class="active">Bookstores</a></li>
+                    </ul>
+                </nav>
+                <a href="signin.html">Sign In</a>
+                <a href="cart.html"><img src="cart-icon.png" alt="Cart"></a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Bookstore Sections -->
+    <div class="bookstore-section" onmouseover="animateBookstoreSection(this)" onmouseout="resetBookstoreSection(this)">
+        <div class="bookstore-info">
+            <h2>Bookstore 1</h2>
+            <p>Featured Book: Book Title</p>
+            <p>Price: $20</p>
+        </div>
+        <div class="bookstore-images">
+            <img src="bookstore1.jpg" alt="Bookstore 1">
+            <img src="book1.jpg" alt="Featured Book">
+        </div>
+    </div>
+    <div class="bookstore-section" onmouseover="animateBookstoreSection(this)" onmouseout="resetBookstoreSection(this)">
+        <div class="bookstore-info">
+            <h2>Bookstore 1</h2>
+            <p>Featured Book: Book Title</p>
+            <p>Price: $20</p>
+        </div>
+        <div class="bookstore-images">
+            <img src="bookstore1.jpg" alt="Bookstore 1">
+            <img src="book1.jpg" alt="Featured Book">
+        </div>
+    </div>
+    <div class="bookstore-section" onmouseover="animateBookstoreSection(this)" onmouseout="resetBookstoreSection(this)">
+        <div class="bookstore-info">
+            <h2>Bookstore 1</h2>
+            <p>Featured Book: Book Title</p>
+            <p>Price: $20</p>
+        </div>
+        <div class="bookstore-images">
+            <img src="bookstore1.jpg" alt="Bookstore 1">
+            <img src="book1.jpg" alt="Featured Book">
+        </div>
+    </div>
+    <div class="bookstore-section" onmouseover="animateBookstoreSection(this)" onmouseout="resetBookstoreSection(this)">
+        <div class="bookstore-info">
+            <h2>Bookstore 1</h2>
+            <p>Featured Book: Book Title</p>
+            <p>Price: $20</p>
+        </div>
+        <div class="bookstore-images">
+            <img src="bookstore1.jpg" alt="Bookstore 1">
+            <img src="book1.jpg" alt="Featured Book">
+        </div>
+    </div>
+    <div class="bookstore-section" onmouseover="animateBookstoreSection(this)" onmouseout="resetBookstoreSection(this)">
+        <div class="bookstore-info">
+            <h2>Bookstore 1</h2>
+            <p>Featured Book: Book Title</p>
+            <p>Price: $20</p>
+        </div>
+        <div class="bookstore-images">
+            <img src="bookstore1.jpg" alt="Bookstore 1">
+            <img src="book1.jpg" alt="Featured Book">
+        </div>
+    </div>
+
+
+
+    <!-- Common Footer -->
+    <footer>
+        <div class="footer-content">
+          <div class="social-media"><!--The links of the official social media pages are linked to the classes of icons imported from FOnt Awesome Library-->
+            <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a><!--the class refers to the icons form the library-->
+            <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+          </div>
+          <p>&copy; 2023 Book Collections. All rights reserved.<br>&copy; Rania Aziz Farooqi </p><!--The copyright-->
+    
+          <div class="contact-info">
+            <p>Phone: +1 123-456-7890</p>
+          </div>
+        </div>
+      </footer>
+
+    <!-- Back-to-Top Button -->
+    <a href="#" class="back-to-top"><i class="fas fa-arrow-up"></i></a>
+
+    <script src="scripts.js"></script>
+    <script>
+        function animateBookstoreSection(element) {
+            element.style.transform = 'scale(1.05)';
+        }
+
+        function resetBookstoreSection(element) {
+            element.style.transform = 'scale(1)';
+        }
+
+    </script>
+</body>
+</html>
