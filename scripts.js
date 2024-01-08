@@ -35,11 +35,15 @@
             gsap.from(".text-content", { y: 50, opacity: 0, duration: 1, delay: 1 });
 
 
-            // Function to toggle navigation visibility on scroll
             function toggleNavigation() {
+                // Check if the screen width is less than a certain value (e.g., 768 pixels)
+                if (window.innerWidth < 650) {
+                    return; // Stop the function
+                }
+            
                 const header = document.querySelector('header');
                 const logoContainer = document.querySelector('.logo-container');
-
+            
                 if (window.scrollY > 50) {
                     gsap.to(header, { height: 40, padding:"80px", opacity: 0.9, duration: 0.5 });
                     gsap.to(".image-section", { height: 400, duration: 0.5 });
@@ -52,6 +56,7 @@
                     gsap.to(logoContainer, { maxHeight: 100, duration: 0.5 });
                 }
             }
+            
 
             // Event listener for scroll
             window.addEventListener('scroll', toggleNavigation);
