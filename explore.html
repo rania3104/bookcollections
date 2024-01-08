@@ -7,159 +7,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
-
-    <title>Bookstore - Explore</title>
+    <link rel="icon" href="bookstore-logo.png" type="image/x-icon"/>
+    <title>Explore | Book Collections</title>
     <link rel="stylesheet" href="styles.css">
-    <style>
-        svg{
-            width: 25px;
-        }
-        /* css slider */
-        .slider{
-            height: 80vh;
-            position: relative;
-            color: #eee;
-        }
-        .slider .list .item{
-            position: absolute;
-            inset: 0 0 0 0;
-            overflow: hidden;
-            opacity: 0;
-            transition: .5s;
-        }
-        .slider .list .item img{
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-        .slider .list .item::after{
-            content: '';
-            width: 100%;
-            height: 100%;
-            position: absolute;
-            left: 0;
-            bottom: 0;
-            background-image: linear-gradient(
-                to top, #000 40%, transparent
-            );
-        }
-        .slider .list .item .content{
-            position: absolute;
-            left: 5%;
-            top: 10%;
-            width: 500px;
-            max-width: 80%;
-            z-index: 1;
-        }
-        .slider .list .item .content p:nth-child(1){
-            text-transform: uppercase;
-            letter-spacing: 10px;
-        }
-        .slider .list .item .content h2{
-            font-size: 100px;
-            margin: 0;
-        }
-        .slider .list .item.active{
-            opacity: 1;
-            z-index: 10;
-        }
-        @keyframes showContent {
-            to{
-                transform: translateY(0);
-                filter: blur(0);
-                opacity: 1;
-            }
-        }
-        .slider .list .item.active p:nth-child(1),
-        .slider .list .item.active h2,
-        .slider .list .item.active p:nth-child(3){
-            transform: translateY(30px);
-            filter: blur(20px);
-            opacity: 0;
-            animation: showContent .5s .7s ease-in-out 1 forwards;
-        }
-        .slider .list .item.active h2{
-            animation-delay: 1s;
-        }
-        .slider .list .item.active p:nth-child(3){
-            animation-duration: 1.3s;
-        }
-        .arrows{
-            position: absolute;
-            top: 30%;
-            right: 50px;
-            z-index: 100;
-        }
-        .arrows button{
-            background-color: #eee5;
-            border: none;
-            font-family: monospace;
-            width: 40px;
-            height: 40px;
-            border-radius: 5px;
-            font-size: x-large;
-            color: #eee;
-            transition: .5s;
-        }
-        .arrows button:hover{
-            background-color: #eee;
-            color: black;
-        }
-        .thumbnail{
-            position: absolute;
-            bottom: 50px;
-            z-index: 11;
-            display: flex;
-            gap: 10px;
-            width: 100%;
-            height: 250px;
-            padding: 0 50px;
-            box-sizing: border-box;
-            overflow: auto;
-            justify-content: center;
-        }
-        .thumbnail::-webkit-scrollbar{
-            width: 0;
-        }
-        .thumbnail .item{
-            width: 150px;
-            height: 220px;
-            filter: brightness(.5);
-            transition: .5s;
-            flex-shrink: 0;
-        }
-        .thumbnail .item img{
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            border-radius: 10px;
-        }
-        .thumbnail .item.active{
-            filter: brightness(1.5);
-        }
-        .thumbnail .item .content{
-            position: absolute;
-            inset: auto 10px 10px 10px;
-        }
-        @media screen and (max-width: 678px) {
-            .thumbnail{
-                justify-content: start;
-            }
-            .slider .list .item .content h2{
-                font-size: 60px;
-            }
-            .arrows{
-                top: 10%;
-            }
-        }
-    </style>
 </head>
 <body>
 
     <header>
         <div class="top-bar">
             <div class="logo-container">
-                <img src="bookstore-logo.png" alt="Bookstore Logo">
+                <a href="index.html"><img src="bookstore-logo.png" alt="Bookstore Logo"></a>
             </div>
             <div class="search-bar">
                 <input type="text" placeholder=" Search books, authors, reviews and more">
@@ -181,57 +38,78 @@
         <!-- list Items -->
         <div class="list">
             <div class="item active">
-                <img src="book1.jpg">
+                <img src="book9.jpg">
                 <div class="content">
-                    <p>design</p>
-                    <h2>Slider 01</h2>
+                    <p>J.K. Rowling</p>
+                    <h2>Harry Potter and The Deathly Hallows</h2>
                     <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, neque?
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, ex.
+                        Harry Potter and the Deathly Hallows is the seventh and final installment of the Harry Potter series. It follows Harry's 
+                        quest to find and destroy Voldemort's Horcruxes, while the wizarding world falls into chaos and darkness.
                     </p>
                 </div>
             </div>
             <div class="item">
-                <img src="book10.jpg">
+                <img src="rom2.jpg">
                 <div class="content">
-                    <p>design</p>
-                    <h2>Slider 02</h2>
+                    <p>Emily Henry</p>
+                    <h2>Book Lovers</h2>
                     <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, neque?
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, ex.
+                        Nora Stephens is a workaholic literary agent living in New York who is dragged into a monthlong trip to the picturesque 
+                        small town of Sunshine Falls, North Carolina by her younger sister. But when Nora runs into Charlie Lastra - a handsome, 
+                        no-nonsense book editor she knows from New York - in Sunshine Falls, she finds herself questioning many aspects of her life.
                     </p>
                 </div>
             </div>
             <div class="item">
-                <img src="book11.jpg">
+                <img src="book12.jpg">
                 <div class="content">
-                    <p>design</p>
-                    <h2>Slider 03</h2>
+                    <p>Tom Felton</p>
+                    <h2>Beyond The Wand</h2>
                     <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, neque?
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, ex.
+                        Beyond the Wand by Tom Felton is a memoir that takes us behind the scenes of Harry Potter, exploring his journey from a 
+                        child actor to a young adult. With candid anecdotes and insights, Felton offers a unique perspective on growing up in the 
+                        spotlight.
                     </p>
                 </div>
             </div>
             <div class="item">
-                <img src="book4.jpg">
+                <img src="book13.jpg">
                 <div class="content">
-                    <p>design</p>
-                    <h2>Slider 04</h2>
+                    <p>Alan Rickman</p>
+                    <h2>Madly, Deeply: The Alan Rickman Diaries</h2>
                     <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, neque?
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, ex.
+                        Rickman's diaries detail the extraordinary and the ordinary, flitting between worldly and witty and gossipy, 
+                        while remaining utterly candid throughout. He takes us inside his home, on trips with friends across the globe, 
+                        and on the sets of films and plays ranging from Sense and Sensibility, to Noël Coward's Private Lives, to the final film 
+                        he directed, A Little Chaos. Running from 1993 to his death in 2016, the diaries provide singular insight into Rickman's 
+                        public and private life.
                     </p>
                 </div>
             </div>
             <div class="item">
-                <img src="book8.jpg">
+                <img src="book14.jpg">
                 <div class="content">
-                    <p>design</p>
-                    <h2>Slider 05</h2>
+                    <p>Khaled Hosseini</p>
+                    <h2>A Thousand Splendid Suns</h2>
                     <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, neque?
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, ex.
+                        A Thousand Splendid Suns tells the story of two women who both end up marrying the same man against their will and the 
+                        deep friendship that the two of them form as a result of their experiences.
+                    </p>
+                </div>
+            </div>
+            <div class="item">
+                <img src="book16.jpg">
+                <div class="content">
+                    <p>Bridgit Kemmerer</p>
+                    <h2>Letters To The Lost</h2>
+                    <p>
+                        Juliet Young always writes letters to her mother, a world-traveling photojournalist. Even after her mother's death, she 
+                        leaves letters at her grave. It's the only way Juliet can cope. Declan Murphy isn't the sort of guy you want to cross. 
+                        In the midst of his court-ordered community service at the local cemetery, he's trying to escape the demons of his past.    
+                        When Declan reads a haunting letter left beside a grave, he can't resist writing back. Soon, he's opening up to a perfect 
+                        stranger, and their connection is immediate. But neither Declan nor Juliet knows that they're not actually strangers. 
+                        When life at school interferes with their secret life of letters, sparks will fly as Juliet and Declan discover truths 
+                        that might tear them apart.
                     </p>
                 </div>
             </div>
@@ -244,31 +122,37 @@
         <!-- thumbnail -->
         <div class="thumbnail">
             <div class="item active">
-                <img src="book1.jpg">
+                <img src="book9.jpg">
                 <div class="content">
                     Name Slider
                 </div>
             </div>
             <div class="item">
-                <img src="book10.jpg">
+                <img src="rom2.jpg">
                 <div class="content">
                     Name Slider
                 </div>
             </div>
             <div class="item">
-                <img src="book11.jpg">
+                <img src="book12.jpg">
                 <div class="content">
                     Name Slider
                 </div>
             </div>
             <div class="item">
-                <img src="book4.jpg">
+                <img src="book13.jpg">
                 <div class="content">
                     Name Slider
                 </div>
             </div>
             <div class="item">
-                <img src="book8.jpg">
+                <img src="book14.jpg">
+                <div class="content">
+                    Name Slider
+                </div>
+            </div>
+            <div class="item">
+                <img src="book16.jpg">
                 <div class="content">
                     Name Slider
                 </div>
@@ -277,7 +161,7 @@
     </div>
     <section id="explore">
         <h2>Crime/Thriller</h2>
-        <div class="book-scroller">
+        <div class="book-scroller fade-in">
             <div class="book">
                 <img src="ct1.jpg" alt="Book 1">
                 <h3>The Fall Of Crazy House</h3>
@@ -348,10 +232,10 @@
         </div>
     </section>
     <section id="explore">
-        <h2>Crime/Thriller</h2>
-        <div class="book-scroller">
+        <h2>Fantasy</h2>
+        <div class="book-scroller fade-in">
             <div class="book">
-                <img src="ct1.jpg" alt="Book 1">
+                <img src="fan1.jpg" alt="Book 1">
                 <h3>The Fall Of Crazy House</h3>
                 <p>James Patterson</p>
                 <div class="add-to-cart">
@@ -359,7 +243,7 @@
                 </div>
             </div>
             <div class="book">
-                <img src="ct2.jpg" alt="Book 2">
+                <img src="fan2.jpeg" alt="Book 2">
                 <h3>Little Boy Lost</h3>
                 <p>J.P. Carter</p>
                 <div class="add-to-cart">
@@ -367,7 +251,7 @@
                 </div>
             </div>
             <div class="book">
-                <img src="ct3.jpg" alt="Book 3">
+                <img src="fan3.jpg" alt="Book 3">
                 <h3>Hanging House</h3>
                 <p>Dean Rasmussen</p>
                 <div class="add-to-cart">
@@ -375,7 +259,7 @@
                 </div>
             </div>
             <div class="book">
-                <img src="ct4.jpg" alt="Book 4">
+                <img src="fan4.jpg" alt="Book 4">
                 <h3>The Girl In The Cabin</h3>
                 <p>Stacy Green</p>
                 <div class="add-to-cart">
@@ -383,7 +267,7 @@
                 </div>
             </div>
             <div class="book">
-                <img src="ct5.jpg" alt="Book 5">
+                <img src="fan5.jpeg" alt="Book 5">
                 <h3>Paint The Dead</h3>
                 <p>Jack Gatland</p>
                 <div class="add-to-cart">
@@ -391,7 +275,7 @@
                 </div>
             </div>
             <div class="book">
-                <img src="book7.jpg" alt="Book 6">
+                <img src="fan6.jpg" alt="Book 6">
                 <h3>The Night She Disappeared</h3>
                 <p>Lisa Jewell</p>
                 <div class="add-to-cart">
@@ -399,7 +283,7 @@
                 </div>
             </div>
             <div class="book">
-                <img src="book8.jpg" alt="Book 7">
+                <img src="fan7.jpg" alt="Book 7">
                 <h3>The Silent Patient</h3>
                 <p>Alex Michaelides</p>
                 <div class="add-to-cart">
@@ -407,7 +291,7 @@
                 </div>
             </div>
             <div class="book">
-                <img src="book11.jpg" alt="Book 8">
+                <img src="fan8.jpg" alt="Book 8">
                 <h3>A Good Girl's Guide To Murder</h3>
                 <p>Holly Jackson</p>
                 <div class="add-to-cart">
@@ -420,10 +304,10 @@
         </div>
     </section>
     <section id="explore">
-        <h2>Crime/Thriller</h2>
-        <div class="book-scroller">
+        <h2>Romance</h2>
+        <div class="book-scroller fade-in">
             <div class="book">
-                <img src="ct1.jpg" alt="Book 1">
+                <img src="rom1.jpeg" alt="Book 1">
                 <h3>The Fall Of Crazy House</h3>
                 <p>James Patterson</p>
                 <div class="add-to-cart">
@@ -431,7 +315,7 @@
                 </div>
             </div>
             <div class="book">
-                <img src="ct2.jpg" alt="Book 2">
+                <img src="rom2.jpg" alt="Book 2">
                 <h3>Little Boy Lost</h3>
                 <p>J.P. Carter</p>
                 <div class="add-to-cart">
@@ -439,7 +323,7 @@
                 </div>
             </div>
             <div class="book">
-                <img src="ct3.jpg" alt="Book 3">
+                <img src="rom3.jpg" alt="Book 3">
                 <h3>Hanging House</h3>
                 <p>Dean Rasmussen</p>
                 <div class="add-to-cart">
@@ -447,7 +331,7 @@
                 </div>
             </div>
             <div class="book">
-                <img src="ct4.jpg" alt="Book 4">
+                <img src="rom4.jpg" alt="Book 4">
                 <h3>The Girl In The Cabin</h3>
                 <p>Stacy Green</p>
                 <div class="add-to-cart">
@@ -455,7 +339,7 @@
                 </div>
             </div>
             <div class="book">
-                <img src="ct5.jpg" alt="Book 5">
+                <img src="rom5.jpg" alt="Book 5">
                 <h3>Paint The Dead</h3>
                 <p>Jack Gatland</p>
                 <div class="add-to-cart">
@@ -463,7 +347,7 @@
                 </div>
             </div>
             <div class="book">
-                <img src="book7.jpg" alt="Book 6">
+                <img src="rom6.jpg" alt="Book 6">
                 <h3>The Night She Disappeared</h3>
                 <p>Lisa Jewell</p>
                 <div class="add-to-cart">
@@ -471,7 +355,7 @@
                 </div>
             </div>
             <div class="book">
-                <img src="book8.jpg" alt="Book 7">
+                <img src="rom7.jpg" alt="Book 7">
                 <h3>The Silent Patient</h3>
                 <p>Alex Michaelides</p>
                 <div class="add-to-cart">
@@ -479,79 +363,7 @@
                 </div>
             </div>
             <div class="book">
-                <img src="book11.jpg" alt="Book 8">
-                <h3>A Good Girl's Guide To Murder</h3>
-                <p>Holly Jackson</p>
-                <div class="add-to-cart">
-                    <button>Add to Cart</button>
-                </div>
-            </div>
-        </div>
-        <div class="explore-more-container">
-            <button class="explore-more-btn"><a href="signin.html">Explore More</a></button>
-        </div>
-    </section>
-    <section id="explore">
-        <h2>Crime/Thriller</h2>
-        <div class="book-scroller">
-            <div class="book">
-                <img src="ct1.jpg" alt="Book 1">
-                <h3>The Fall Of Crazy House</h3>
-                <p>James Patterson</p>
-                <div class="add-to-cart">
-                    <button>Add to Cart</button>
-                </div>
-            </div>
-            <div class="book">
-                <img src="ct2.jpg" alt="Book 2">
-                <h3>Little Boy Lost</h3>
-                <p>J.P. Carter</p>
-                <div class="add-to-cart">
-                    <button>Add to Cart</button>
-                </div>
-            </div>
-            <div class="book">
-                <img src="ct3.jpg" alt="Book 3">
-                <h3>Hanging House</h3>
-                <p>Dean Rasmussen</p>
-                <div class="add-to-cart">
-                    <button>Add to Cart</button>
-                </div>
-            </div>
-            <div class="book">
-                <img src="ct4.jpg" alt="Book 4">
-                <h3>The Girl In The Cabin</h3>
-                <p>Stacy Green</p>
-                <div class="add-to-cart">
-                    <button>Add to Cart</button>
-                </div>
-            </div>
-            <div class="book">
-                <img src="ct5.jpg" alt="Book 5">
-                <h3>Paint The Dead</h3>
-                <p>Jack Gatland</p>
-                <div class="add-to-cart">
-                    <button>Add to Cart</button>
-                </div>
-            </div>
-            <div class="book">
-                <img src="book7.jpg" alt="Book 6">
-                <h3>The Night She Disappeared</h3>
-                <p>Lisa Jewell</p>
-                <div class="add-to-cart">
-                    <button>Add to Cart</button>
-                </div>
-            </div>
-            <div class="book">
-                <img src="book8.jpg" alt="Book 7">
-                <h3>The Silent Patient</h3>
-                <p>Alex Michaelides</p>
-                <div class="add-to-cart">
-                    <button>Add to Cart</button>
-                </div>
-            </div>
-            <div class="book">
-                <img src="book11.jpg" alt="Book 8">
+                <img src="rom8.jpeg" alt="Book 8">
                 <h3>A Good Girl's Guide To Murder</h3>
                 <p>Holly Jackson</p>
                 <div class="add-to-cart">
