@@ -1023,7 +1023,10 @@ svg{
         display: none;
     }
     .cart-items{
-        display: inline-flex
+        display: inline-flex;
+    }
+    .cart-page{
+        margin: 0 40px;
 
     }
     .cart-item{
@@ -1033,8 +1036,12 @@ svg{
         flex-direction: column;
     }
 
-    .image-section img, .hpimage1{
+    .image-section img{
         display: none;
+    }
+
+    .bookstore-info{
+        margin-right: 20px;
     }
     
 }
