@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script> <!--importing gsap-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"><!--to import the icons in the footer-->
     <link rel="icon" href="bookstore-logo.png" type="image/x-icon"/> <!--setting the window icon-->
     <title>Home | Book Collections</title> <!--naming the tab-->
@@ -11,31 +11,33 @@
 </head>
 <body>
 
-    <header>
+    <header> <!--common header among the pages-->
         <div class="top-bar">
-            <div class="logo-container">
-                <a href="index.html"><img src="bookstore-logo.png" alt="Bookstore Logo"></a>
+            <div class="logo-container"> <!--logo-->
+                <a href="index.html"><img src="bookstore-logo.png" alt="Bookstore Logo"></a> <!--the logo links to the index page-->
             </div>
-            <div class="search-bar">
-                <input type="text" placeholder=" Search books, authors, reviews and more">
+            <div class="search-bar"> <!--search bar-->
+                <input type="text" placeholder=" Search books, authors, reviews and more"> <!--text within the search bar-->
             </div>
-            <div class="right-section">
+            <div class="right-section"> <!--nav links-->
                 <nav>
-                    <input type="checkbox" class="toggle-menu">
+                    <input type="checkbox" class="toggle-menu"> <!--hamburger menu (hidden initially)-->
                     <div class="hamburger"></div>
                     <ul class="menu">
-                        <li><a href="index.html" class="active">Home</a></li>
+                        <li><a href="index.html" class="active">Home</a></li> <!--active-->
                         <li><a href="explore.html">Explore</a></li>
                         <li><a href="bookstore.html">Bookstores</a></li>
                         <li><a href="signin.html">Sign In</a></li>
-                        <li><a href="cart.html"><img src="cart-icon.png" alt="Cart"></a></li>
+                        <li><a href="cart.html"><img src="cart-icon.png" alt="Cart"></a></li> <!--cart icon-->
                     </ul>
                 </nav>
             </div>
         </div>
     </header>
 
-    <div class="image-section" onmousemove="draw(event)">
+
+    <!--image section with a call-to-action button -->
+    <div class="image-section" onmousemove="draw(event)"><!--calls the function to draw using cursor when hovered over-->
         <img src="bookstore-image1.png" alt="Bookstore Image">
         <div class="text-content">
             <h1>Fauget Store</h1>
@@ -45,185 +47,188 @@
         <img src="bookstore-image2.png" alt="Bookstore Image">
     </div>
 
-
+    <!--section for displaying the latest books -->
     <section id="latest-books">
         <h2 class="fade-in">Latest Books</h2>
-        <div class="book-scroller fade-in">
-            <div class="book">
+        <div class="book-scroller fade-in"> <!--scroller-->
+            <div class="book"> <!--book cover and details-->
                 <img src="book1.jpg" alt="Book 1">
                 <h3>Normal People</h3>
                 <p>Sally Rooney</p>
                 <div class="add-to-cart">
-                    <button>Add to Cart</button>
+                    <button>Add to Cart</button> <!--activates on hover-->
                 </div>
             </div>
-            <div class="book">
+            <div class="book"> <!--book cover and details-->
                 <img src="book2.jpg" alt="Book 2">
                 <h3>The Light Behind The Garden Wall</h3>
                 <p>Scott Whitehead</p>
                 <div class="add-to-cart">
-                    <button>Add to Cart</button>
+                    <button>Add to Cart</button> <!--activates on hover-->
                 </div>
             </div>
-            <div class="book">
+            <div class="book"> <!--book cover and details-->
                 <img src="book3.jpg" alt="Book 3">
                 <h3>After She Left</h3>
                 <p>Penelope Hanley</p>
                 <div class="add-to-cart">
-                    <button>Add to Cart</button>
+                    <button>Add to Cart</button> <!--activates on hover-->
                 </div>
             </div>
-            <div class="book">
+            <div class="book"> <!--book cover and details-->
                 <img src="book4.jpg" alt="Book 4">
                 <h3>Atomic Love</h3>
                 <p>Selena Walls</p>
                 <div class="add-to-cart">
-                    <button>Add to Cart</button>
+                    <button>Add to Cart</button> <!--activates on hover-->
                 </div>
             </div>
-            <div class="book">
+            <div class="book"> <!--book cover and details-->
                 <img src="book5.jpg" alt="Book 5">
                 <h3>Memory</h3>
                 <p>Angelina Aludo</p>
                 <div class="add-to-cart">
-                    <button>Add to Cart</button>
+                    <button>Add to Cart</button> <!--activates on hover-->
                 </div>
             </div>
-            <div class="book">
+            <div class="book"> <!--book cover and details-->
                 <img src="book6.png" alt="Book 6">
                 <h3>Bigger & Better</h3>
                 <p>Kevin Lee</p>
                 <div class="add-to-cart">
-                    <button>Add to Cart</button>
+                    <button>Add to Cart</button> <!--activates on hover-->
                 </div>
             </div>
-            <div class="book">
+            <div class="book"> <!--book cover and details-->
                 <img src="book7.jpg" alt="Book 7">
                 <h3>The Night She Disappeared</h3>
                 <p>Lisa Jewell</p>
                 <div class="add-to-cart">
-                    <button>Add to Cart</button>
+                    <button>Add to Cart</button> <!--activates on hover-->
                 </div>
             </div>
-            <div class="book">
+            <div class="book"> <!--book cover and details-->
                 <img src="book8.jpg" alt="Book 8">
                 <h3>The Silent Patient</h3>
                 <p>Alex Michaelides</p>
                 <div class="add-to-cart">
-                    <button>Add to Cart</button>
+                    <button>Add to Cart</button> <!--activates on hover-->
                 </div>
             </div>
         </div>
         
     </section>
 
+    <!--section for exploring more books -->
     <section id="explore">
         <h2 class="fade-in">Explore More Books</h2>
-        <div class="book-scroller fade-in">
-            <div class="book">
+        <div class="book-scroller fade-in"><!--scroller-->
+            <div class="book"> <!--book cover and details-->
                 <img src="book9.jpg" alt="Book 1">
                 <h3>Harry Potter And The Deathly Hallows</h3>
                 <p>J.K. Rowling</p>
                 <div class="add-to-cart">
-                    <button>Add to Cart</button>
+                    <button>Add to Cart</button> <!--activates on hover-->
                 </div>
             </div>
-            <div class="book">
+            <div class="book"> <!--book cover and details-->
                 <img src="book12.jpg" alt="Book 2">
                 <h3>Beyond the Wand</h3>
                 <p>Tom Felton</p>
                 <div class="add-to-cart">
-                    <button>Add to Cart</button>
+                    <button>Add to Cart</button> <!--activates on hover-->
                 </div>
             </div>
-            <div class="book">
+            <div class="book"> <!--book cover and details-->
                 <img src="book16.jpg" alt="Book 3">
                 <h3>Letters To The Lost</h3>
                 <p>Bridgit Kemmerer</p>
                 <div class="add-to-cart">
-                    <button>Add to Cart</button>
+                    <button>Add to Cart</button> <!--activates on hover-->
                 </div>
             </div>
-            <div class="book">
+            <div class="book"> <!--book cover and details-->
                 <img src="book11.jpg" alt="Book 4">
                 <h3>A Good Girl's Guide To Murder</h3>
                 <p>Holly Jackson</p>
                 <div class="add-to-cart">
-                    <button>Add to Cart</button>
+                    <button>Add to Cart</button> <!--activates on hover-->
                 </div>
             </div>
-            <div class="book">
+            <div class="book"> <!--book cover and details-->
                 <img src="book13.jpg" alt="Book 5">
                 <h3>Madly, Deeply: The Alan Rickman Diaries</h3>
                 <p>Alan Rickman</p>
                 <div class="add-to-cart">
-                    <button>Add to Cart</button>
+                    <button>Add to Cart</button> <!--activates on hover-->
                 </div>
             </div>
-            <div class="book">
+            <div class="book"> <!--book cover and details-->
                 <img src="book14.jpg" alt="Book 6">
                 <h3>A Thousand Splendid Suns</h3>
                 <p>Khaled Hosseini</p>
                 <div class="add-to-cart">
-                    <button>Add to Cart</button>
+                    <button>Add to Cart</button> <!--activates on hover-->
                 </div>
             </div>
-            <div class="book">
+            <div class="book"> <!--book cover and details-->
                 <img src="book10.jpg" alt="Book 7">
                 <h3>Holly</h3>
                 <p>Stephen King</p>
                 <div class="add-to-cart">
-                    <button>Add to Cart</button>
+                    <button>Add to Cart</button> <!--activates on hover-->
                 </div>
             </div>
-            <div class="book">
+            <div class="book"> <!--book cover and details-->
                 <img src="book15.jpg" alt="Book 8">
                 <h3>Traitors Gate</h3>
                 <p>Jeffrey Archer</p>
                 <div class="add-to-cart">
-                    <button>Add to Cart</button>
+                    <button>Add to Cart</button> <!--activates on hover-->
                 </div>
             </div>
         </div>
         <div class="explore-more-container fade-in">
-            <button class="explore-more-btn"><a href="explore.html">Explore More</a></button>
+            <button class="explore-more-btn"><a href="explore.html">Explore More</a></button> <!--link to the explore page-->
         </div>
     </section>
+
+    <!--section for displaying local bookstores-->
     <section id="bookstores">
         <h2 class="fade-in">Local Bookstores</h2>
-        <div class="bookstore-scroller fade-in">
-            <!-- Add bookstore items similar to the book scroller -->
-            <div class="bookstore">
+        <div class="bookstore-scroller fade-in"> <!--scroller-->
+            <div class="bookstore"> <!--bookstore logo and name-->
                 <img src="bookstore1.jpg" alt="Bookstore 1">
                 <h3>CoolBook Bookstore</h3>
             </div>
-            <div class="bookstore">
+            <div class="bookstore"> <!--bookstore logo and name-->
                 <img src="bookstore2.jpg" alt="Bookstore 2">
                 <h3>Word Bookstore</h3>
             </div>
-            <div class="bookstore">
+            <div class="bookstore"> <!--bookstore logo and name-->
                 <img src="bookstore3.png" alt="Bookstore 1">
                 <h3>The Story Shop</h3>
             </div>
-            <div class="bookstore">
+            <div class="bookstore"> <!--bookstore logo and name-->
                 <img src="bookstore4.png" alt="Bookstore 2">
                 <h3>Box Of Books</h3>
             </div>
-            <div class="bookstore">
+            <div class="bookstore"> <!--bookstore logo and name-->
                 <img src="bookstore5.png" alt="Bookstore 1">
                 <h3>Mouse & Bear Books</h3>
             </div>
-            <div class="bookstore">
+            <div class="bookstore"> <!--bookstore logo and name-->
                 <img src="bookstore6.jpg" alt="Bookstore 2">
                 <h3>Booke Bookstore</h3>
             </div>
         </div>
         <div class="explore-more-container fade-in">
-            <button class="explore-more-btn"><a href="bookstore.html">Explore More</a></button>
+            <button class="explore-more-btn"><a href="bookstore.html">Explore More</a></button> <!--links to the bookstore page-->
+        </div>
         </div>
     </section>
     
-
+    <!--image section as a banner-->
     <div class="image-section2">
         <img src="hp1.png" alt="Bookstore Image" class="hpimage1 fade-in">
         <div class="text2 fade-in">
@@ -232,8 +237,9 @@
             <button class="visit-store-btn fade-in">Visit Store</button>
         </div>
         <img src="hp2.png" alt="Bookstore Image" class="hpimage fade-in">
-
     </div>
+
+    <!--section for signing up for a newsletter-->
     <div class="newsletter-section">
         <div class="newsletter-image">
             <img src="newsletter-image.jpeg" alt="Newsletter Image">
@@ -241,18 +247,18 @@
         <div class="newsletter-container">
             <h2 class="fade-in">Sign up for our newsletter</h2>
             <p class="fade-in">Get the latest updates on new releases, promotions, and more.</p>
-            <form class="newsletter-form fade-in">
+            <form class="newsletter-form fade-in"><!--for,-->
                 <input type="email" placeholder="Your email address" required>
                 <button type="submit">Subscribe</button>
             </form>
         </div>
     </div>
-    <a href="#" class="back-to-top"><i class="fas fa-arrow-up"></i></a><!--This link is for displaying a back to the top button-->
+    <a href="#" class="back-to-top"><i class="fas fa-arrow-up"></i></a> <!--this link is for displaying a back to the top button-->
 
-    <!-- Footer -->
+    <!--common footer-->
     <footer>
       <div class="footer-content">
-        <div class="social-media"><!--The links of the official social media pages are linked to the classes of icons imported from FOnt Awesome Library-->
+        <div class="social-media"><!--the icons are imported from Font Awesome Library-->
           <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a><!--the class refers to the icons form the library-->
           <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
           <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
@@ -265,9 +271,11 @@
         </div>
       </div>
     </footer>
-    <script src="scripts.js"></script>
+
+    <script src="scripts.js"></script><!--linking external script-->
+
     <script>    
-        function draw(e) {
+        function draw(e) { //function for cursor hover
             const canvas = document.createElement('div');
             canvas.className = 'canvas';
 
@@ -283,7 +291,7 @@
             canvas.style.left = `${xPos - 20}px`;
             canvas.style.transition = 'all 0.3s ease-out';
 
-            const randomColor = getRandomColor();
+            const randomColor = getRandomColor(); //gets color for the circles
             canvas.style.background = randomColor;
 
             document.body.appendChild(canvas);
@@ -297,7 +305,7 @@
             }, 310);
         }
 
-        function getRandomColor() {
+        function getRandomColor() { //function to get a random color
             const letters = '0123456789ABCDEF';
             let color = '#';
             for (let i = 0; i < 6; i++) {
@@ -305,8 +313,6 @@
             }
             return color;
         }
-
-
     </script>
 </body>
 </html>

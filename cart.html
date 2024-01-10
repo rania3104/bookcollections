@@ -1,110 +1,109 @@
-<!-- cart.html -->
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
-    <link rel="icon" href="bookstore-logo.png" type="image/x-icon"/>
-    <title>Cart | Book Collections</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script> <!--importing gsap-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"><!--to import the icons in the footer-->
+    <link rel="icon" href="bookstore-logo.png" type="image/x-icon"/> <!--setting the window icon-->
+    <title>Cart | Book Collections</title> <!--naming the tab-->
+    <link rel="stylesheet" href="styles.css"> <!--attaching the stylesheet-->
 </head>
 <body>
 
-    <!-- Common Header -->
-    <header>
+    <header> <!--common header among the pages-->
         <div class="top-bar">
-            <div class="logo-container">
-                <a href="index.html"><img src="bookstore-logo.png" alt="Bookstore Logo"></a>
+            <div class="logo-container"> <!--logo-->
+                <a href="index.html"><img src="bookstore-logo.png" alt="Bookstore Logo"></a> <!--the logo links to the index page-->
             </div>
-            <div class="search-bar">
-                <input type="text" placeholder=" Search books, authors, reviews and more">
+            <div class="search-bar"> <!--search bar-->
+                <input type="text" placeholder=" Search books, authors, reviews and more"> <!--text within the search bar-->
             </div>
-            <div class="right-section">
+            <div class="right-section"> <!--nav links-->
                 <nav>
-                    <input type="checkbox" class="toggle-menu">
+                    <input type="checkbox" class="toggle-menu"> <!--hamburger menu (hidden initially)-->
                     <div class="hamburger"></div>
                     <ul class="menu">
-                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html">Home</a></li> 
                         <li><a href="explore.html">Explore</a></li>
                         <li><a href="bookstore.html">Bookstores</a></li>
-                        <li><a href="cart.html"><img src="cart-icon.png" alt="Cart"></a></li>
+                        <li><a href="cart.html"><img src="cart-icon.png" alt="Cart"></a></li> <!--cart icon-->
+                        <div class="profile-container">
+                            <!--profile picture indicating user is signed in(for the cart)-->
+                            <img src="profile-picture.jpg" alt="Profile Picture">
+                        </div>
                     </ul>
                 </nav>
-                <div class="profile-container">
-                    <!-- Add your profile picture source here -->
-                    <img src="profile-picture.jpg" alt="Profile Picture">
-                </div>
+
 
             </div>
         </div>
     </header>
 
-    <div class="cart-page">
+    <div class="cart-page"><!--the cart-->
         <h2 class="fade-in">Your Shopping Cart</h2>
         <div class="cart-items">
-            <div class="cart-item fade-in">
+            <div class="cart-item fade-in"><!--one cart card that contains the book cover and details-->
                 <img src="book9.jpg" alt="Book 1">
                 <div class="cart-item-details">
                     <h3>Harry Potter And The Deathly Hallows</h3>
                     <p>J.K. Rowling - The Story Shop</p>
                     <p>Price: 50 AED</p>
                 </div>
-                <div class="remove-btn">Remove from Cart</div>
+                <div class="remove-btn">Remove from Cart</div> <!--activates on hover-->
             </div>
-            <div class="cart-item fade-in">
+            <div class="cart-item fade-in"><!--one cart card that contains the book cover and details-->
                 <img src="book12.jpg" alt="Book 2">
                 <div class="cart-item-details">
                     <h3>Beyond the Wand</h3>
                     <p>Tom Felton - Fauget Store</p>
                     <p>Price: 35 AED</p>
                 </div>
-                <div class="remove-btn">Remove from Cart</div>
+                <div class="remove-btn">Remove from Cart</div> <!--activates on hover-->
             </div>
             
-            <div class="cart-item fade-in">
+            <div class="cart-item fade-in"><!--one cart card that contains the book cover and details-->
                 <img src="book16.jpg" alt="Book 3">
                 <div class="cart-item-details">
                     <h3>Letters To The Lost</h3>
                     <p>Bridgit Kemmerer - CoolBook Bookstore</p>
                     <p>Price: 45 AED</p>
                 </div>
-                <div class="remove-btn">Remove from Cart</div>
+                <div class="remove-btn">Remove from Cart</div> <!--activates on hover-->
             </div>
             
-            <div class="cart-item fade-in">
+            <div class="cart-item fade-in"><!--one cart card that contains the book cover and details-->
                 <img src="book11.jpg" alt="Book 4">
                 <div class="cart-item-details">
                     <h3>A Good Girl's Guide To Murder</h3>
                     <p>Holly Jackson - Mouse & Bear Books</p>
                     <p>Price: 30 AED</p>
                 </div>
-                <div class="remove-btn">Remove from Cart</div>
+                <div class="remove-btn">Remove from Cart</div> <!--activates on hover-->
             </div>
             
-            <div class="cart-item fade-in">
+            <div class="cart-item fade-in"><!--one cart card that contains the book cover and details-->
                 <img src="book13.jpg" alt="Book 5">
                 <div class="cart-item-details">
                     <h3>Madly, Deeply: The Alan Rickman Diaries</h3>
                     <p>Alan Rickman - Box Of Books</p>
                     <p>Price: 55 AED</p>
                 </div>
-                <div class="remove-btn">Remove from Cart</div>
+                <div class="remove-btn">Remove from Cart</div> <!--activates on hover-->
             </div>
             
-            <div class="cart-item fade-in">
+            <div class="cart-item fade-in"><!--one cart card that contains the book cover and details-->
                 <img src="book14.jpg" alt="Book 6">
                 <div class="cart-item-details">
                     <h3>A Thousand Splendid Suns</h3>
                     <p>Khaled Hosseini - Booke Bookstore</p>
                     <p>Price: 40 AED</p>
                 </div>
-                <div class="remove-btn">Remove from Cart</div>
+                <div class="remove-btn">Remove from Cart</div> <!--activates on hover-->
             </div>
         </div>
 
-        <div class="cart-summary fade-in">
+        <div class="cart-summary fade-in"><!--checkout section-->
             <h3>Order Summary</h3>
             <p>Total Items: 6</p>
             <p>Subtotal: 255 AED</p>
@@ -113,25 +112,24 @@
         </div>
     </div>
 
-    <!-- Common Footer -->
-    <footer>
-        <div class="footer-content">
-          <div class="social-media"><!--The links of the official social media pages are linked to the classes of icons imported from FOnt Awesome Library-->
-            <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a><!--the class refers to the icons form the library-->
-            <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
-            <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
-            <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
-          </div>
-          <p>&copy; 2023 Book Collections. All rights reserved.<br>&copy; Rania Aziz Farooqi </p><!--The copyright-->
-    
-          <div class="contact-info">
-            <p>Phone: +1 123-456-7890</p>
-          </div>
-        </div>
-      </footer>
+    <a href="#" class="back-to-top"><i class="fas fa-arrow-up"></i></a> <!--this link is for displaying a back to the top button-->
 
-    <!-- Back-to-Top Button -->
-    <a href="#" class="back-to-top"><i class="fas fa-arrow-up"></i></a>
+    <!--common footer-->
+    <footer>
+      <div class="footer-content">
+        <div class="social-media"><!--the icons are imported from Font Awesome Library-->
+          <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a><!--the class refers to the icons form the library-->
+          <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+        </div>
+        <p>&copy; 2023 Book Collections. All rights reserved.<br>&copy; Rania Aziz Farooqi </p><!--The copyright-->
+  
+        <div class="contact-info">
+          <p>Phone: +1 123-456-7890</p>
+        </div>
+      </div>
+    </footer>
 
     <script src="scripts.js"></script>
 </body>

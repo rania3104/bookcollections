@@ -1,5 +1,4 @@
-/* styles.css */
-
+/*BASIC STYLING-for all*/
 body {
     font-family: 'Arial', sans-serif;
     margin: 0;
@@ -7,24 +6,25 @@ body {
 
 }
 
-
+/*HEADER STYLING-for all*/
 header {
     background-color: #333;
     color: #fff;
     padding: 1px;
 }
-.top-bar {
-    display: flex;
+.top-bar { /*navigation bar styles*/
+    display: flex; /*for responsiveness*/
     justify-content: space-between;
     align-items: center;
 }
 
-.logo-container img {
+.logo-container img { /*logo image styles*/
     max-height: 100px; 
     margin-left: 20px;
 }
 
-.search-bar {
+/*search bar styles*/
+.search-bar { 
     flex-grow: 1;
     margin: 0 20px;
 }
@@ -36,6 +36,7 @@ header {
     border-radius: 30px;
 }
 
+/*nav links styles*/
 .right-section {
     display: flex;
     align-items: center;
@@ -48,6 +49,54 @@ header {
     color: #fff;
 }
 
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    margin-right: 50px;
+}
+
+nav li {
+    margin-right: 20px;
+}
+
+nav a {
+    text-decoration: none; /*removes link underline*/
+    color: #fff;
+}
+
+/*styles for the active link */
+nav a.active {
+    font-weight: bold;
+    border-bottom: 3px solid #fff; 
+}
+
+/*styles for the hover effect on non-active links */
+nav a:not(.active):hover {
+    position: relative;
+}
+
+/*creates the line below the non-active links with an increasing animation */
+nav a:not(.active)::after {
+    content: '';
+    position: absolute;
+    bottom: -3px;
+    left: 50%; /*positions the line in the middle of the link */
+    width: 0;
+    height: 3px;
+    background-color: #fff;
+    transition: width 0.3s ease-in-out;
+    transform: translateX(-50%); /*centers the line */
+}
+
+/*increases the line width on hover */
+nav a:not(.active):hover::after {
+    width: 100%;
+}
+
+/*hamburger menu styles*/
 .hamburger{
     position: relative;
     width:30px;
@@ -56,12 +105,12 @@ header {
     background-color: #fff;
     border-radius: 10px;
     cursor: pointer;
-    z-index: 2;
+    z-index: 2; /*to show on top of everything else*/
     transition: 0.3s;
 }
 
 .hamburger::before,
-.hamburger::after{
+.hamburger::after{ /*to create the shape of hamburger menu*/
     content:"";
     position: absolute;
     height: 4px;
@@ -91,14 +140,16 @@ header {
 }
 
 .hamburger, .toggle-menu{
-    display: none;
+    display: none; /*hidden initially*/
 }
 
-.right-section input:checked ~ .hamburger {
+/*styles to change the hamburger menu into a 'x' when checked*/
+.right-section input:checked ~ .hamburger { /*the center line goes transparent*/
     background: transparent;
 }
 
-.right-section input:checked ~ .hamburger::before {
+/*the top and bottom lines rotate to form a 'x'*/
+.right-section input:checked ~ .hamburger::before { 
     top:0;
     transform:rotate(-45deg);
     width: 30px;
@@ -111,31 +162,39 @@ header {
 
 }
 
-
-
+/*IMAGE SECTION STYLING-index.html*/
 .image-section {
     display: flex;
     position: relative;
     background-color: #9AC2C6;
     overflow: hidden;
-    background-image: linear-gradient(
+    background-image: linear-gradient( /*to apply upward linear gradient*/
         to top, #000000cf 40%, transparent  
     );
 }
 
-.canvas {
+.canvas { /*for the cursor drawing movements*/
     position: absolute;
     top: 0;
     left: 0;
     pointer-events: none;
 }
-.image-section2 {
+.image-section2 { /*styling for the Harry Potter banner*/
     display: flex;
     position: relative;
     background-color: #4f5467;
-    background-image: radial-gradient(#9aa3c6 40%, transparent  );
+    background-image: radial-gradient(#9aa3c6 40%, transparent  ); /*radial gradient in the background*/
 }
 
+.hpimage,.hpimage1{
+    margin-left:30px ;
+    max-height: 350px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+/*text styles for image section*/
 .text2 h1 {
     font-size: 55px;
     margin-bottom: 10px;
@@ -173,6 +232,7 @@ header {
     color: #84c1c7cd;
 }
 
+/*visit button styles*/
 .visit-store-btn {
     border-radius: 20px;
     padding: 10px 20px;
@@ -184,18 +244,21 @@ header {
     display: block; 
 }
 
-.visit-store-btn:hover{
+.visit-store-btn:hover{ /*background color changes on hover*/
     background-color: #494949;
 }
 
+/*image styles for image section*/
 .image-section img {
     max-width: 100%;
     height: auto;
 }
+
 section {
     padding: 20px;
 }
 
+/*FOOTER STYLES-for all*/
 footer {
     background-color: #333;
     color: #fff;
@@ -205,18 +268,19 @@ footer {
     width: 100%;
 }
 .footer-content {
-    display: flex; /* Displays the element as a flex container */
-    flex-wrap: wrap; /* Allows flex items to wrap to the next line if necessary */
-    justify-content: space-between; /* Distributes flex items evenly with equal space between them */
-    align-items: center; /* Centers flex items vertically within the container */
-    max-width: 1200px; /* Sets the maximum width of the container to 1200 pixels */
-    margin: 0 auto; /* Centers the container horizontally within its parent element */
+    display: flex; /*displays the element as a flex container */
+    flex-wrap: wrap; /*allows flex items to wrap to the next line if necessary */
+    justify-content: space-between; 
+    align-items: center;
+    max-width: 1200px; 
+    margin: 0 auto; 
     padding: 20px; 
 }
 
+/*social media icons styling*/
 .social-media {
-    display: flex; /* Displays the element as a flex container */
-    gap: 10px; /* Sets the gap between flex items to 10 pixels */
+    display: flex; 
+    gap: 10px; 
 }
 
 .social-link {
@@ -224,91 +288,47 @@ footer {
     font-size: 20px; 
     text-decoration: none; 
 }
-nav ul {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    justify-content:center;
-    align-items: center;
-    margin-right: 50px;
+
+/*LATEST BOOKS, EXPLORE BOOKS AND LOCAL BOOKSTORES SECTIONS STYLING-index.html and explore.html*/
+#latest-books,#explore,#local {
+    background-color: #f5f5f5; 
+    padding: 20px 40px 0px 40px;
+    border-radius: 15px; 
 }
 
-nav li {
-    margin-right: 20px;
-}
-
-nav a {
-    text-decoration: none;
-    color: #fff;
-}
-/* Add styles for the active link */
-nav a.active {
-    font-weight: bold;
-    border-bottom: 3px solid #fff; /* Line color for the active link */
-}
-
-/* Add styles for the hover effect on non-active links */
-nav a:not(.active):hover {
-    position: relative;
-}
-
-/* Add the line below the non-active links with a nice increasing animation */
-nav a:not(.active)::after {
-    content: '';
-    position: absolute;
-    bottom: -3px;
-    left: 50%; /* Position the line in the middle of the link */
-    width: 0;
-    height: 3px;
-    background-color: #fff;
-    transition: width 0.3s ease-in-out;
-    transform: translateX(-50%); /* Center the line */
-}
-
-/* Increase the line width on hover */
-nav a:not(.active):hover::after {
-    width: 100%;
-}
-
-
-
-#latest-books,
-#explore,#local {
-    background-color: #f5f5f5; /* Set the background color for the Latest Books and Explore sections */
-    padding: 20px 40px 0px 40px; /* Add padding for better visibility */
-    border-radius: 15px; /* Add rounded corners */
-
-}
-
+/*scroller styles*/
 .book-scroller {
     display: flex;
-    overflow-x: scroll;
-    background-color: #000000; /* Set the background color for the scroller */
+    overflow-x: scroll; /*enables scrolling on overflow*/
+    background-color: #000000; 
     padding: 50px;
     margin-top: 20px;
-    border-radius: 15px; /* Add rounded corners */
-    background-image: linear-gradient(
+    border-radius: 15px; 
+    background-image: linear-gradient( /*adds downward linear gradient to the background of the scroller*/
         to bottom, #3d3d3d 40%, transparent  
     );
 }
 
-/* Style the scrollbar */
+/*styling scrollbar */
 .book-scroller::-webkit-scrollbar {
-    width: 8px; /* Set the width of the scrollbar */
+    width: 8px; /*sets the width of the scrollbar*/
 }
 
+/*styling the scroller's thumb (the slider)*/
 .book-scroller::-webkit-scrollbar-thumb {
-    background-color: #494949; /* Set the color of the scrollbar thumb */
-    border-radius: 10px; /* Add rounded corners to the thumb */
+    background-color: #494949; 
+    border-radius: 10px;
 }
 
+/*styling the background of the scroller's thumb (the place where the thumb slides)*/
 .book-scroller::-webkit-scrollbar-track {
-    background-color: #333; /* Set the color of the scrollbar track */
-    border-radius: 10px; /* Add rounded corners to the track */
+    background-color: #333;
+    border-radius: 10px; 
 }
 
+/*styling the books inside the scroller*/
 .book {
-    flex: 0 0 250px;
+    flex: 0 0 250px; /*flex*/
     margin-right: 20px;
     text-align: center;
     position: relative;
@@ -316,81 +336,73 @@ nav a:not(.active):hover::after {
     transition: transform 0.3s ease-in-out;
 }
 
-/* Add hover effect */
+/*hover effect for the books*/
 .book:hover {
-    transform: scale(1.1); /* Scale the book on hover */
+    transform: scale(1.1); /*scales the book on hover */
 }
 
+/*book image styles*/
 .book img {
     max-width: 100%;
-    height: 200px; /* Set a fixed height for consistent image heights */
+    height: 200px; /*sets a fixed height for consistent image heights */
     border-radius: 8px;
-    transition: transform 0.3s ease-in-out; /* Apply the transition effect to the image */
+    transition: transform 0.3s ease-in-out; /*applies the transition effect to the image */
 }
 
-/* Add hover effect for the image */
+/*hover effect for the image */
 .book:hover img {
-    transform: scale(1.1); /* Scale the image on hover */
+    transform: scale(1.1); /*scales the image on hover */
 }
 
-.book h3,
-.book p {
+/*scroller text styles*/
+.book h3,.book p {
     margin: 5px 0;
     color: #fff;
 }
 
-
-/* Set the positioning of the back-to-top button */
-.back-to-top {
-    position: fixed; /* Fix the position of the button */
-    bottom: 20px; 
-    right: 20px; 
-    display: none; /* Initially hide the button */
-    width: 40px; 
-    height: 40px; 
-    background-color: #333; 
-    color: #fff; 
-    border-radius: 50%; 
-    text-align: center; 
-    line-height: 40px; 
-    font-size: 20px; 
-    z-index: 9999; /* Set a high z-index to ensure the button appears on top of other elements */
+/*add to cart styles*/
+.book .add-to-cart {
+    position: relative;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
 }
 
-/* Styles for when the mouse hovers over the button */
-.back-to-top:hover {
-    background-color: #383838; /* Change the background color when hovering */
+/*activating add to cart when hovered over the book*/
+.book:hover .add-to-cart {
+    opacity: 1;
 }
 
-/* Styles for when the button is shown */
-.back-to-top.show {
-    display: block; /* Show the button when the show class is applied */
+/*add to cart button styles*/
+.book .add-to-cart button {
+    background-color: #fff;
+    color: #333;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer; /*changes the cursor to a pointer*/
 }
 
-/* Additional styles for Font Awesome icons */
-.fab {
-    font-size: inherit; /* Makes elements with the class "fab" inherit the font size of their parent elements */
+/*add to cart button hover styles*/
+.book .add-to-cart button:hover {
+    background-color: #ababab;
 }
 
-.hpimage,.hpimage1{
-    margin-left:30px ;
-    max-height: 350px;
-    justify-content: center;
-    align-items: center;
-    margin-top: 20px;
-}
-
+/*explore more section styles*/
 .explore-more-container {
     text-align: center;
     margin-top: 20px;
 }
 
+/*explore more button styles*/
 .explore-more-btn{
     border-radius: 30px;
     padding: 20px 50px;
     background-color: #333;
     border: none;
-    cursor: pointer;
+    cursor: pointer; /*changes the cursor to a pointer*/
     margin-bottom: 10px;
 }
 
@@ -404,41 +416,44 @@ nav a:not(.active):hover::after {
     background-color: #494949;
 }
 
+/*bookstores section styles*/
 #bookstores {
     background-color: #f5f5f5;
     padding: 20px 40px;
     border-radius: 15px;
-
-
 }
 
+/*bookstore scroller styles*/
 .bookstore-scroller {
     display: flex;
-    overflow-x: scroll;
+    overflow-x: scroll; /*enables scrolling on overflow*/
     background-color: #000000;
     padding: 50px;
     margin-top: 20px;
     border-radius: 15px;
-    background-image: linear-gradient(
+    background-image: linear-gradient( /*applies a downward gradient to the scroller*/
         to bottom, #3d3d3d 40%, transparent  
     );
 }
 
-/* Style the scrollbar for the bookstore scroller */
+/*styling the scrollbar for the bookstore scroller */
 .bookstore-scroller::-webkit-scrollbar {
     width: 8px;
 }
 
+/*styling the scroller's thumb (the slider)*/
 .bookstore-scroller::-webkit-scrollbar-thumb {
     background-color: #494949;
     border-radius: 10px;
 }
 
+/*styling the background of the scroller's thumb (the place where the thumb slides)*/
 .bookstore-scroller::-webkit-scrollbar-track {
     background-color: #333;
     border-radius: 10px;
 }
 
+/*styling the bookstores inside the scroller*/
 .bookstore {
     flex: 0 0 250px;
     margin-right: 20px;
@@ -448,12 +463,12 @@ nav a:not(.active):hover::after {
     transition: transform 0.3s ease-in-out;
 }
 
-/* Add hover effect for the bookstore items */
+/*hover effect for the bookstore*/
 .bookstore:hover {
     transform: scale(1.1);
 }
 
-/* Style the bookstore item image */
+/*book image styles*/
 .bookstore img {
     width: 200px;
     height: 200px;
@@ -461,22 +476,50 @@ nav a:not(.active):hover::after {
     transition: transform 0.3s ease-in-out;
 }
 
-/* Add hover effect for the bookstore item image */
+/*hover effect for the bookstore item image */
 .bookstore:hover img {
     transform: scale(1.1);
 }
 
-/* Style the text content in the bookstore items */
-.bookstore h3,
-.bookstore p {
+/*scroller text styles*/
+.bookstore h3,.bookstore p {
     margin: 5px 0;
     color: #fff;
 }
 
-/* styles.css */
+/*BACK TO TOP STYLING-for all*/
+.back-to-top {
+    position: fixed; /*fix the position of the button*/
+    bottom: 20px; 
+    right: 20px; 
+    display: none; /*initially hide the button */
+    width: 40px; 
+    height: 40px; 
+    background-color: #333; 
+    color: #fff; 
+    border-radius: 50%; 
+    text-align: center; 
+    line-height: 40px; 
+    font-size: 20px; 
+    z-index: 9999; /*setting a high z-index to ensure the button appears on top of other elements*/
+}
 
-/* Add existing styles */
+/*styles for when the mouse hovers over the button*/
+.back-to-top:hover {
+    background-color: #383838; /*change the background color when hovering*/
+}
 
+/*styles for when the button is shown*/
+.back-to-top.show {
+    display: block; /*show the button when the show class is applied*/
+}
+
+/*additional styles for Font Awesome icons*/
+.fab {
+    font-size: inherit; /*makes elements with the class "fab" inherit the font size of their parent elements*/
+}
+
+/*SIGN IN CONTAINER STYLES-signin.html*/
 .signin-container {
     max-width: 400px;
     margin: 50px auto;
@@ -486,9 +529,10 @@ nav a:not(.active):hover::after {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.9);
 }
 
+/*sign in form styles*/
 .signin-form {
     display: flex;
-    flex-direction: column;
+    flex-direction: column; /*to make the content be in a column*/
 }
 
 .signin-form h2 {
@@ -520,14 +564,11 @@ nav a:not(.active):hover::after {
     text-decoration: none;
 }
 
-.signin-form button:hover {
+.signin-form button:hover { /*sign in button hover styles*/
     background-color: #494949;
 }
 
-/* styles.css */
-
-/* ... (previous code) */
-
+/*styles for the additional links*/
 .additional-links {
     text-align: center;
     margin-top: 20px;
@@ -539,10 +580,7 @@ nav a:not(.active):hover::after {
     margin-right: 10px;
 }
 
-/* styles.css */
-
-/* ... (previous code) */
-
+/*NEWSLETTER SECTION STYLES-index.html and signin.html*/
 .newsletter-section {
     display: flex;
     justify-content: space-between;
@@ -550,23 +588,25 @@ nav a:not(.active):hover::after {
     margin: 50px auto;
 }
 
+/*newsletter image styles*/
 .newsletter-image {
-    flex: 0 0 45%; /* Adjust the width of the image section */
+    flex: 0 0 45%; /*adjusting the width of the image section */
 }
 
 .newsletter-image img {
     width: 100%;
-    border-radius: 10px; /* Add rounded corners to the image */
+    border-radius: 10px;
 }
 
 .newsletter-container {
-    flex: 0 0 50%; /* Adjust the width of the container section */
+    flex: 0 0 50%; /*adjusting the width of the container section */
     padding: 20px;
     background-color: #f5f5f5;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
+/*newsletter text styles*/
 .newsletter-container h2 {
     text-align: center;
     margin-bottom: 20px;
@@ -578,11 +618,13 @@ nav a:not(.active):hover::after {
     color: #555;
 }
 
+/*styling for the newsletter form*/
 .newsletter-form {
-    display: flex;
+    display: flex; /*display flex for responsiveness*/
     flex-direction: column;
 }
 
+/*form input styles*/
 .newsletter-form input {
     padding: 10px;
     margin-bottom: 15px;
@@ -590,6 +632,7 @@ nav a:not(.active):hover::after {
     border-radius: 5px;
 }
 
+/*form button styles*/
 .newsletter-form button {
     padding: 10px;
     background-color: #333;
@@ -597,42 +640,39 @@ nav a:not(.active):hover::after {
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    
 }
 
-.newsletter-form button:hover {
+.newsletter-form button:hover { /*button hover effect*/
     background-color: #494949;
 }
 
-/* styles.css */
-
-/* ... (previous code) */
-
+/*CART SECTION STYLES-cart.html*/
 .cart-page {
-    max-width: 1000px;
+    max-width: 1000px; /*setting max-width for a good user experience*/
     margin: 40px auto;
     padding: 10px;
 }
 
-.cart-items {
+.cart-items { /*styling the container of the cart cards*/
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: wrap; /*wraps around when resized*/
     gap:0px;
 }
 
-.cart-item {
-    flex: 30%;
+.cart-item { /*styling the individual cart cards*/
+    flex: 30%; /*to display three in a row*/
     border: 1px solid #ddd;
     background-color: #fff;
     padding: 15px;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); 
     position: relative;
     overflow: hidden;
     transition: transform 0.3s;
 }
 
-.cart-item:hover {
+/*cart item hover styles*/
+.cart-item:hover { /*scales and comes on top when hovered upon*/
     transform: scale(1.05);
     z-index: 1;
 }
@@ -641,12 +681,13 @@ nav a:not(.active):hover::after {
     opacity: 1;
 }
 
+/*remove from the cart button styles*/
 .remove-btn {
     position: absolute;
     bottom: 0;
     left: 0;
     width: 100%;
-    background-color: rgba(255, 0, 0, 0.8); /* Red background with some transparency */
+    background-color: rgba(255, 0, 0, 0.8); /*some transparency*/
     color: #fff;
     text-align: center;
     padding: 10px;
@@ -654,11 +695,13 @@ nav a:not(.active):hover::after {
     transition: opacity 0.3s;
 }
 
+/*remove from the cart button hover styles*/
 .remove-btn:hover {
-    cursor: pointer;
-    background-color: rgba(255, 0, 0, 1); /* Fully opaque red background on hover */
+    cursor: pointer; /*changes the cursor to a pointer*/
+    background-color: rgba(255, 0, 0, 1); /*fully opaque on hover */
 }
 
+/*cart item image styles*/
 .cart-item img {
     width: 100%;
     height: 450px;
@@ -666,6 +709,7 @@ nav a:not(.active):hover::after {
     margin-bottom: 10px;
 }
 
+/*cart item text styless*/
 .cart-item-details h3 {
     margin-bottom: 5px;
 }
@@ -675,6 +719,7 @@ nav a:not(.active):hover::after {
     margin-bottom: 5px;
 }
 
+/*checkout section styles*/
 .cart-summary {
     margin-top: 20px;
     padding: 20px;
@@ -683,45 +728,23 @@ nav a:not(.active):hover::after {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
+/*checkout button styles*/
 .checkout-btn {
     border-radius: 30px;
     padding: 15px 30px;
     background-color: #333;
     color: #fff;
     border: none;
-    cursor: pointer;
+    cursor: pointer; /*changes the cursor to a pointer*/
     margin-top: 10px;
 }
 
+/*checkout button hover styles*/
 .checkout-btn:hover {
     background-color: #494949;
 }
 
-.book .add-to-cart {
-    position: relative;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    opacity: 0;
-    transition: opacity 0.3s ease-in-out;
-}
 
-.book:hover .add-to-cart {
-    opacity: 1;
-}
-
-.book .add-to-cart button {
-    background-color: #fff;
-    color: #333;
-    border: none;
-    padding: 8px 15px;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.book .add-to-cart button:hover {
-    background-color: #ababab;
-}
 
 /* Add styles for fade-in effect */
 .fade-in {
@@ -1026,7 +1049,7 @@ svg{
         display: inline-flex;
     }
     .cart-page{
-        margin: 0 40px;
+        margin: 0 50px;
 
     }
     .cart-item{
@@ -1049,9 +1072,7 @@ svg{
     *{
         box-sizing: border-box;
     }
-    .profile-container{
-        display: none;
-    }
+
     .hamburger,.toggle-menu{
         display: block;
     }

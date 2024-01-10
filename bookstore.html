@@ -3,42 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
-    <link rel="icon" href="bookstore-logo.png" type="image/x-icon"/>
-    <title>Bookstores | Book Collections</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script> <!--importing gsap-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"><!--to import the icons in the footer-->
+    <link rel="icon" href="bookstore-logo.png" type="image/x-icon"/> <!--setting the window icon-->
+    <title>Bookstores | Book Collections</title> <!--naming the tab-->
+    <link rel="stylesheet" href="styles.css"> <!--attaching the stylesheet-->
 </head>
 <body>
 
-    <!-- Common Header -->
-    <header>
+    <header> <!--common header among the pages-->
         <div class="top-bar">
-            <div class="logo-container">
-                <a href="index.html"><img src="bookstore-logo.png" alt="Bookstore Logo"></a>
+            <div class="logo-container"> <!--logo-->
+                <a href="index.html"><img src="bookstore-logo.png" alt="Bookstore Logo"></a> <!--the logo links to the index page-->
             </div>
-            <div class="search-bar">
-                <input type="text" placeholder=" Search books, authors, reviews and more">
+            <div class="search-bar"> <!--search bar-->
+                <input type="text" placeholder=" Search books, authors, reviews and more"> <!--text within the search bar-->
             </div>
-            <div class="right-section">
+            <div class="right-section"> <!--nav links-->
                 <nav>
-                    <input type="checkbox" class="toggle-menu">
+                    <input type="checkbox" class="toggle-menu"> <!--hamburger menu (hidden initially)-->
                     <div class="hamburger"></div>
                     <ul class="menu">
-                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html">Home</a></li> 
                         <li><a href="explore.html">Explore</a></li>
-                        <li><a href="bookstore.html"  class="active">Bookstores</a></li>
+                        <li><a href="bookstore.html"  class="active">Bookstores</a></li> <!--active-->
                         <li><a href="signin.html">Sign In</a></li>
-                        <li><a href="cart.html"><img src="cart-icon.png" alt="Cart"></a></li>
+                        <li><a href="cart.html"><img src="cart-icon.png" alt="Cart"></a></li> <!--cart icon-->
                     </ul>
                 </nav>
-
             </div>
         </div>
     </header>
 
-    <!-- Bookstore Sections -->
-    <div class="bookstore-section" onmouseover="animateBookstoreSection(this)" onmouseout="resetBookstoreSection(this)">
-        <div class="bookstore-info">
+    <!--bookstore section-->
+    <!--JavaScript for the hover animation-->
+    <div class="bookstore-section" onmouseover="animateBookstoreSection(this)" onmouseout="resetBookstoreSection(this)"> 
+        <div class="bookstore-info"> <!--bookstore info and logo + featured book info and cover-->
             <h2>CoolBook Bookstore</h2>
             <p>Featured Book: Letters To The Lost</p>
             <p>Price: 45 AED</p>
@@ -48,8 +48,10 @@
             <img src="book16.jpg" alt="Featured Book">
         </div>
     </div>
+
+    <!--JavaScript for the hover animation-->
     <div class="bookstore-section" onmouseover="animateBookstoreSection(this)" onmouseout="resetBookstoreSection(this)">
-        <div class="bookstore-info">
+        <div class="bookstore-info"> <!--bookstore info and logo + featured book info and cover-->
             <h2>Booke Bookstore</h2>
             <p>Featured Book: A Thousand Splendid Suns</p>
             <p>Price: 40 AED</p>
@@ -59,8 +61,10 @@
             <img src="book14.jpg" alt="Featured Book">
         </div>
     </div>
+
+    <!--JavaScript for the hover animation-->
     <div class="bookstore-section" onmouseover="animateBookstoreSection(this)" onmouseout="resetBookstoreSection(this)">
-        <div class="bookstore-info">
+        <div class="bookstore-info"> <!--bookstore info and logo + featured book info and cover-->
             <h2>Mouse & Bear Books</h2>
             <p>Featured Book: A Good Girl's Guide To Murder</p>
             <p>Price: 30 AED</p>
@@ -70,8 +74,10 @@
             <img src="book11.jpg" alt="Featured Book">
         </div>
     </div>
+
+    <!--JavaScript for the hover animation-->
     <div class="bookstore-section" onmouseover="animateBookstoreSection(this)" onmouseout="resetBookstoreSection(this)">
-        <div class="bookstore-info">
+        <div class="bookstore-info"> <!--bookstore info and logo + featured book info and cover-->
             <h2>The Story Shop</h2>
             <p>Featured Book: Harry Potter and The Deathly Hallows</p>
             <p>Price: 50 AED</p>
@@ -81,8 +87,10 @@
             <img src="book9.jpg" alt="Featured Book">
         </div>
     </div>
+
+    <!--JavaScript for the hover animation-->
     <div class="bookstore-section" onmouseover="animateBookstoreSection(this)" onmouseout="resetBookstoreSection(this)">
-        <div class="bookstore-info">
+        <div class="bookstore-info"> <!--bookstore info and logo + featured book info and cover-->
             <h2>Box Of Books</h2>
             <p>Featured Book: Madly Deeply: The Alan Rickman Diaries</p>
             <p>Price: 55 AED</p>
@@ -94,29 +102,28 @@
     </div>
 
 
+    <a href="#" class="back-to-top"><i class="fas fa-arrow-up"></i></a> <!--this link is for displaying a back to the top button-->
 
-    <!-- Common Footer -->
+    <!--common footer-->
     <footer>
-        <div class="footer-content">
-          <div class="social-media"><!--The links of the official social media pages are linked to the classes of icons imported from FOnt Awesome Library-->
-            <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a><!--the class refers to the icons form the library-->
-            <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
-            <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
-            <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
-          </div>
-          <p>&copy; 2023 Book Collections. All rights reserved.<br>&copy; Rania Aziz Farooqi </p><!--The copyright-->
-    
-          <div class="contact-info">
-            <p>Phone: +1 123-456-7890</p>
-          </div>
+      <div class="footer-content">
+        <div class="social-media"><!--the icons are imported from Font Awesome Library-->
+          <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a><!--the class refers to the icons form the library-->
+          <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
         </div>
-      </footer>
-
-    <!-- Back-to-Top Button -->
-    <a href="#" class="back-to-top"><i class="fas fa-arrow-up"></i></a>
+        <p>&copy; 2023 Book Collections. All rights reserved.<br>&copy; Rania Aziz Farooqi </p><!--The copyright-->
+  
+        <div class="contact-info">
+          <p>Phone: +1 123-456-7890</p>
+        </div>
+      </div>
+    </footer>
 
     <script src="scripts.js"></script>
     <script>
+        //changes the scale of the section
         function animateBookstoreSection(element) {
             element.style.transform = 'scale(1.05)';
         }

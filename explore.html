@@ -1,46 +1,44 @@
-<!-- explore.html -->
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
-    <link rel="icon" href="bookstore-logo.png" type="image/x-icon"/>
-    <title>Explore | Book Collections</title>
-    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script> <!--importing gsap-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"><!--to import the icons in the footer-->
+    <link rel="icon" href="bookstore-logo.png" type="image/x-icon"/> <!--setting the window icon-->
+    <title>Explore | Book Collections</title> <!--naming the tab-->
+    <link rel="stylesheet" href="styles.css"> <!--attaching the stylesheet-->
 </head>
 <body>
 
-    <header>
+    <header> <!--common header among the pages-->
         <div class="top-bar">
-            <div class="logo-container">
-                <a href="index.html"><img src="bookstore-logo.png" alt="Bookstore Logo"></a>
+            <div class="logo-container"> <!--logo-->
+                <a href="index.html"><img src="bookstore-logo.png" alt="Bookstore Logo"></a> <!--the logo links to the index page-->
             </div>
-            <div class="search-bar">
-                <input type="text" placeholder=" Search books, authors, reviews and more">
+            <div class="search-bar"> <!--search bar-->
+                <input type="text" placeholder=" Search books, authors, reviews and more"> <!--text within the search bar-->
             </div>
-            <div class="right-section">
+            <div class="right-section"> <!--nav links-->
                 <nav>
-                    <input type="checkbox" class="toggle-menu">
+                    <input type="checkbox" class="toggle-menu"> <!--hamburger menu (hidden initially)-->
                     <div class="hamburger"></div>
                     <ul class="menu">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="explore.html" class="active">Explore</a></li>
+                        <li><a href="index.html">Home</a></li> 
+                        <li><a href="explore.html" class="active">Explore</a></li> <!--active-->
                         <li><a href="bookstore.html">Bookstores</a></li>
                         <li><a href="signin.html">Sign In</a></li>
-                        <li><a href="cart.html"><img src="cart-icon.png" alt="Cart"></a></li>
+                        <li><a href="cart.html"><img src="cart-icon.png" alt="Cart"></a></li> <!--cart icon-->
                     </ul>
                 </nav>
             </div>
         </div>
     </header>
-    <div class="slider">
-        <!-- list Items -->
-        <div class="list">
-            <div class="item active">
-                <img src="book9.jpg">
+    <div class="slider"> <!--the slider-->
+        <div class="list"> 
+            <div class="item active"> <!--The background of the slider (changes when the book is selected or initially has a timer). 
+                Initially starts with Harry Potter-->
+                <img src="book9.jpg"> <!--book image and content-->
                 <div class="content">
                     <p>J.K. Rowling</p>
                     <h2>Harry Potter and The Deathly Hallows</h2>
@@ -50,8 +48,8 @@
                     </p>
                 </div>
             </div>
-            <div class="item">
-                <img src="rom2.jpg">
+            <div class="item"> <!--The background of the slider (changes when the book is selected or initially has a timer)-->
+                <img src="rom2.jpg"> <!--book image and content-->
                 <div class="content">
                     <p>Emily Henry</p>
                     <h2>Book Lovers</h2>
@@ -62,8 +60,8 @@
                     </p>
                 </div>
             </div>
-            <div class="item">
-                <img src="book12.jpg">
+            <div class="item"> <!--The background of the slider (changes when the book is selected or initially has a timer)-->
+                <img src="book12.jpg"> <!--book image and content-->
                 <div class="content">
                     <p>Tom Felton</p>
                     <h2>Beyond The Wand</h2>
@@ -74,8 +72,8 @@
                     </p>
                 </div>
             </div>
-            <div class="item">
-                <img src="book13.jpg">
+            <div class="item"> <!--The background of the slider (changes when the book is selected or initially has a timer)-->
+                <img src="book13.jpg"> <!--book image and content-->
                 <div class="content">
                     <p>Alan Rickman</p>
                     <h2>Madly, Deeply: The Alan Rickman Diaries</h2>
@@ -88,8 +86,8 @@
                     </p>
                 </div>
             </div>
-            <div class="item">
-                <img src="book14.jpg">
+            <div class="item"> <!--The background of the slider (changes when the book is selected or initially has a timer)-->
+                <img src="book14.jpg"> <!--book image and content-->
                 <div class="content">
                     <p>Khaled Hosseini</p>
                     <h2>A Thousand Splendid Suns</h2>
@@ -99,8 +97,8 @@
                     </p>
                 </div>
             </div>
-            <div class="item">
-                <img src="book16.jpg">
+            <div class="item"> <!--The background of the slider (changes when the book is selected or initially has a timer)-->
+                <img src="book16.jpg"> <!--book image and content-->
                 <div class="content">
                     <p>Bridgit Kemmerer</p>
                     <h2>Letters To The Lost</h2>
@@ -116,44 +114,46 @@
                 </div>
             </div>
         </div>
-        <!-- button arrows -->
+
+        <!--arrow buttons for the slider-->
         <div class="arrows">
             <button id="prev"><</button>
             <button id="next">></button>
         </div>
-        <!-- thumbnail -->
+
+        <!--thumbnails to click on to change the slider background-->
         <div class="thumbnail">
-            <div class="item active">
+            <div class="item active"> <!--the thumbnail and the name of the book. initially starts with Harry Potter-->
                 <img src="book9.jpg">
                 <div class="content">
                     Harry Potter And The Deathly Hallows
                 </div>
             </div>
-            <div class="item">
+            <div class="item"> <!--the thumbnail and the name of the book-->
                 <img src="rom2.jpg">
                 <div class="content">
                     Book Lover
                 </div>
             </div>
-            <div class="item">
+            <div class="item"> <!--the thumbnail and the name of the book-->
                 <img src="book12.jpg">
                 <div class="content">
                     Beyond The Wand
                 </div>
             </div>
-            <div class="item">
+            <div class="item"> <!--the thumbnail and the name of the book-->
                 <img src="book13.jpg">
                 <div class="content">
                     Madly, Deeply: The Alan Rickman Diaries
                 </div>
             </div>
-            <div class="item">
+            <div class="item"> <!--the thumbnail and the name of the book-->
                 <img src="book14.jpg">
                 <div class="content">
                     A Thousand Splendid Suns
                 </div>
             </div>
-            <div class="item">
+            <div class="item"> <!--the thumbnail and the name of the book-->
                 <img src="book16.jpg">
                 <div class="content">
                     Letters To The Lost
@@ -161,253 +161,261 @@
             </div>
         </div>
     </div>
+
+    <!--section for exploring crime/thriller books -->
     <section id="explore">
         <h2>Crime/Thriller</h2>
-        <div class="book-scroller fade-in">
-            <div class="book">
+        <div class="book-scroller fade-in"> <!--scroller-->
+            <div class="book"> <!--book cover and details-->
                 <img src="ct1.jpg" alt="Book 1">
                 <h3>The Fall Of Crazy House</h3>
                 <p>James Patterson</p>
                 <div class="add-to-cart">
-                    <button>Add to Cart</button>
+                    <button>Add to Cart</button> <!--activates on hover-->
                 </div>
             </div>
-            <div class="book">
-                <img src="ct2.jpg" alt="Book 2">
+            <div class="book"> <!--book cover and details-->
+                <img src="ct2.jpg" alt="Book 2"> <!--activates on hover-->
                 <h3>Little Boy Lost</h3>
                 <p>J.P. Carter</p>
                 <div class="add-to-cart">
-                    <button>Add to Cart</button>
+                    <button>Add to Cart</button> <!--activates on hover-->
                 </div>
             </div>
-            <div class="book">
+            <div class="book"> <!--book cover and details-->
                 <img src="ct3.jpg" alt="Book 3">
                 <h3>Hanging House</h3>
                 <p>Dean Rasmussen</p>
                 <div class="add-to-cart">
-                    <button>Add to Cart</button>
+                    <button>Add to Cart</button> <!--activates on hover-->
                 </div>
             </div>
-            <div class="book">
+            <div class="book"> <!--book cover and details-->
                 <img src="ct4.jpg" alt="Book 4">
                 <h3>The Girl In The Cabin</h3>
                 <p>Stacy Green</p>
                 <div class="add-to-cart">
-                    <button>Add to Cart</button>
+                    <button>Add to Cart</button> <!--activates on hover-->
                 </div>
             </div>
-            <div class="book">
+            <div class="book"> <!--book cover and details-->
                 <img src="ct5.jpg" alt="Book 5">
                 <h3>Paint The Dead</h3>
                 <p>Jack Gatland</p>
                 <div class="add-to-cart">
-                    <button>Add to Cart</button>
+                    <button>Add to Cart</button> <!--activates on hover-->
                 </div>
             </div>
-            <div class="book">
+            <div class="book"> <!--book cover and details-->
                 <img src="book7.jpg" alt="Book 6">
                 <h3>The Night She Disappeared</h3>
                 <p>Lisa Jewell</p>
                 <div class="add-to-cart">
-                    <button>Add to Cart</button>
+                    <button>Add to Cart</button> <!--activates on hover-->
                 </div>
             </div>
-            <div class="book">
+            <div class="book"> <!--book cover and details-->
                 <img src="book8.jpg" alt="Book 7">
                 <h3>The Silent Patient</h3>
                 <p>Alex Michaelides</p>
                 <div class="add-to-cart">
-                    <button>Add to Cart</button>
+                    <button>Add to Cart</button> <!--activates on hover-->
                 </div>
             </div>
-            <div class="book">
+            <div class="book"> <!--book cover and details-->
                 <img src="book11.jpg" alt="Book 8">
                 <h3>A Good Girl's Guide To Murder</h3>
                 <p>Holly Jackson</p>
                 <div class="add-to-cart">
-                    <button>Add to Cart</button>
+                    <button>Add to Cart</button> <!--activates on hover-->
                 </div>
             </div>
         </div>
         <div class="explore-more-container">
-            <button class="explore-more-btn"><a href="signin.html">Explore More</a></button>
+            <button class="explore-more-btn"><a href="explore.html">Explore More</a></button> <!--link to the same page-->
         </div>
     </section>
+
+    <!--section for exploring fantasy books -->
     <section id="explore">
         <h2>Fantasy</h2>
-        <div class="book-scroller fade-in">
-            <div class="book">
+        <div class="book-scroller fade-in"> <!--scroller-->
+            <div class="book"> <!--book cover and details-->
                 <img src="fan1.jpg" alt="Book 1">
                 <h3>Fourth Wing</h3>
                 <p>Rebecca Yarros</p>
                 <div class="add-to-cart">
-                    <button>Add to Cart</button>
+                    <button>Add to Cart</button> <!--activates on hover-->
                 </div>
             </div>
-            <div class="book">
+            <div class="book"> <!--book cover and details-->
                 <img src="fan2.jpeg" alt="Book 2">
                 <h3>The Woven Kingdom</h3>
                 <p>Tahereh Mafi</p>
                 <div class="add-to-cart">
-                    <button>Add to Cart</button>
+                    <button>Add to Cart</button> <!--activates on hover-->
                 </div>
             </div>
-            <div class="book">
+            <div class="book"> <!--book cover and details-->
                 <img src="fan3.jpg" alt="Book 3">
                 <h3>The Serpents & The Wings Of Night</h3>
                 <p>Carissa Broadbent</p>
                 <div class="add-to-cart">
-                    <button>Add to Cart</button>
+                    <button>Add to Cart</button> <!--activates on hover-->
                 </div>
             </div>
-            <div class="book">
+            <div class="book"> <!--book cover and details-->
                 <img src="fan4.jpg" alt="Book 4">
                 <h3>A Court Of Thorns And Roses</h3>
                 <p>Sarah J. Maas</p>
                 <div class="add-to-cart">
-                    <button>Add to Cart</button>
+                    <button>Add to Cart</button> <!--activates on hover-->
                 </div>
             </div>
-            <div class="book">
+            <div class="book"> <!--book cover and details-->
                 <img src="fan5.jpeg" alt="Book 5">
                 <h3>Caraval</h3>
                 <p>Stephanie Garber</p>
                 <div class="add-to-cart">
-                    <button>Add to Cart</button>
+                    <button>Add to Cart</button> <!--activates on hover-->
                 </div>
             </div>
-            <div class="book">
+            <div class="book"> <!--book cover and details-->
                 <img src="fan6.jpg" alt="Book 6">
                 <h3>The Cruel Prince</h3>
                 <p>Holly Black</p>
                 <div class="add-to-cart">
-                    <button>Add to Cart</button>
+                    <button>Add to Cart</button> <!--activates on hover-->
                 </div>
             </div>
-            <div class="book">
+            <div class="book"> <!--book cover and details-->
                 <img src="fan7.jpg" alt="Book 7">
                 <h3>Powerless</h3>
                 <p>Lauren Roberts</p>
                 <div class="add-to-cart">
-                    <button>Add to Cart</button>
+                    <button>Add to Cart</button> <!--activates on hover-->
                 </div>
             </div>
-            <div class="book">
+            <div class="book"> <!--book cover and details-->
                 <img src="fan8.jpg" alt="Book 8">
                 <h3>Of Blood And Water</h3>
                 <p>Ellouise Liston</p>
                 <div class="add-to-cart">
-                    <button>Add to Cart</button>
+                    <button>Add to Cart</button> <!--activates on hover-->
                 </div>
             </div>
         </div>
         <div class="explore-more-container">
-            <button class="explore-more-btn"><a href="signin.html">Explore More</a></button>
+            <button class="explore-more-btn"><a href="explore.html">Explore More</a></button> <!--link to the same page-->
         </div>
     </section>
+
+    <!--section for exploring romance books -->
     <section id="explore">
         <h2>Romance</h2>
-        <div class="book-scroller fade-in">
-            <div class="book">
+        <div class="book-scroller fade-in"> <!--scroller-->
+            <div class="book"> <!--book cover and details-->
                 <img src="rom7.jpg" alt="Book 1">
                 <h3>Things We Never Got Over</h3>
                 <p>Lucy Score</p>
                 <div class="add-to-cart">
-                    <button>Add to Cart</button>
+                    <button>Add to Cart</button> <!--activates on hover-->
                 </div>
             </div>
-            <div class="book">
+            <div class="book"> <!--book cover and details-->
                 <img src="rom2.jpg" alt="Book 2">
                 <h3>Book Lovers</h3>
                 <p>Emily Henry</p>
                 <div class="add-to-cart">
-                    <button>Add to Cart</button>
+                    <button>Add to Cart</button> <!--activates on hover-->
                 </div>
             </div>
-            <div class="book">
+            <div class="book"> <!--book cover and details-->
                 <img src="rom3.jpg" alt="Book 3">
                 <h3>One Percent Of You</h3>
                 <p>Michelle Gross</p>
                 <div class="add-to-cart">
-                    <button>Add to Cart</button>
+                    <button>Add to Cart</button> <!--activates on hover-->
                 </div>
             </div>
-            <div class="book">
+            <div class="book"> <!--book cover and details-->
                 <img src="rom4.jpg" alt="Book 4">
                 <h3>New York, Actually</h3>
                 <p>Sarah Morgan</p>
                 <div class="add-to-cart">
-                    <button>Add to Cart</button>
+                    <button>Add to Cart</button> <!--activates on hover-->
                 </div>
             </div>
-            <div class="book">
+            <div class="book"> <!--book cover and details-->
                 <img src="rom5.jpg" alt="Book 5">
                 <h3>Yours Truly</h3>
                 <p>Abby Jimenez</p>
                 <div class="add-to-cart">
-                    <button>Add to Cart</button>
+                    <button>Add to Cart</button> <!--activates on hover-->
                 </div>
             </div>
-            <div class="book">
+            <div class="book"> <!--book cover and details-->
                 <img src="rom6.jpg" alt="Book 6">
                 <h3>The Hating Game</h3>
                 <p>Sally Thorne</p>
                 <div class="add-to-cart">
-                    <button>Add to Cart</button>
+                    <button>Add to Cart</button> <!--activates on hover-->
                 </div>
             </div>
-            <div class="book">
+            <div class="book"> <!--book cover and details-->
                 <img src="rom8.jpeg" alt="Book 7">
                 <h3>Just Haven't Met You Yet</h3>
                 <p>Sophie Cousens</p>
                 <div class="add-to-cart">
-                    <button>Add to Cart</button>
+                    <button>Add to Cart</button> <!--activates on hover-->
                 </div>
             </div>
-            <div class="book">
+            <div class="book"> <!--book cover and details-->
                 <img src="rom1.jpeg" alt="Book 8">
                 <h3>Eloise And The Grump Next Door</h3>
                 <p>Emma St. Clair & Jenny Proctor</p>
                 <div class="add-to-cart">
-                    <button>Add to Cart</button>
+                    <button>Add to Cart</button> <!--activates on hover-->
                 </div>
             </div>
         </div>
         <div class="explore-more-container">
-            <button class="explore-more-btn"><a href="signin.html">Explore More</a></button>
+            <button class="explore-more-btn"><a href="explore.html">Explore More</a></button> <!--link to the same page-->
         </div>
     </section>
 
-    <!-- Back to top button -->
-    <a href="#" class="back-to-top"><i class="fas fa-arrow-up"></i></a>
+    <a href="#" class="back-to-top"><i class="fas fa-arrow-up"></i></a> <!--this link is for displaying a back to the top button-->
 
-    <!-- Footer -->
+    <!--common footer-->
     <footer>
-        <div class="footer-content">
-            <div class="social-media">
-                <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
-                <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
-                <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
-                <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
-            </div>
-            <p>&copy; 2023 Book Collections. All rights reserved.<br>&copy; Rania Aziz Farooqi </p>
-            <div class="contact-info">
-                <p>Phone: +1 123-456-7890</p>
-            </div>
+      <div class="footer-content">
+        <div class="social-media"><!--the icons are imported from Font Awesome Library-->
+          <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a><!--the class refers to the icons form the library-->
+          <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
         </div>
+        <p>&copy; 2023 Book Collections. All rights reserved.<br>&copy; Rania Aziz Farooqi </p><!--The copyright-->
+  
+        <div class="contact-info">
+          <p>Phone: +1 123-456-7890</p>
+        </div>
+      </div>
     </footer>
 
-    <script src="scripts.js"></script>
+    <script src="scripts.js"></script> <!--linking an external script-->
     <script>
+        //code for the slider
         let items = document.querySelectorAll('.slider .list .item');
         let next = document.getElementById('next');
         let prev = document.getElementById('prev');
         let thumbnails = document.querySelectorAll('.thumbnail .item');
 
-        // config param
+        //configuring parameters
         let countItem = items.length;
         let itemActive = 0;
-        // event next click
+
+        //event next click for the arrows
         next.onclick = function(){
             itemActive = itemActive + 1;
             if(itemActive >= countItem){
@@ -415,7 +423,7 @@
             }
             showSlider();
         }
-        //event prev click
+        //event prev click for the arrows
         prev.onclick = function(){
             itemActive = itemActive - 1;
             if(itemActive < 0){
@@ -423,29 +431,29 @@
             }
             showSlider();
         }
-        // auto run slider
+        //auto run slider
         let refreshInterval = setInterval(() => {
             next.click();
         }, 5000)
         function showSlider(){
-            // remove item active old
+            //remove the old item active
             let itemActiveOld = document.querySelector('.slider .list .item.active');
             let thumbnailActiveOld = document.querySelector('.thumbnail .item.active');
             itemActiveOld.classList.remove('active');
             thumbnailActiveOld.classList.remove('active');
 
-            // active new item
+            //new active item
             items[itemActive].classList.add('active');
             thumbnails[itemActive].classList.add('active');
 
-            // clear auto time run slider
+            //clear auto time run slider
             clearInterval(refreshInterval);
             refreshInterval = setInterval(() => {
                 next.click();
             }, 5000)
         }
 
-        // click thumbnail
+        //clicking thumbnail
         thumbnails.forEach((thumbnail, index) => {
             thumbnail.addEventListener('click', () => {
                 itemActive = index;
