@@ -1077,7 +1077,7 @@ svg{
         display: block;
     }
     .right-section input:checked ~ .menu {
-    right:-50px;
+        right:-50px;
     }  
     .right-section input:not(:checked) ~ .menu {
         display: none;
@@ -1093,6 +1093,7 @@ svg{
         height: 110%;
         background: #333;
         z-index: 2000;
+        
     }
 
     nav ul li{
