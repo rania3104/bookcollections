@@ -744,56 +744,57 @@ footer {
     background-color: #494949;
 }
 
-
-
-/* Add styles for fade-in effect */
+/*FADE IN STYLES-for all*/
 .fade-in {
     opacity: 0;
     transition: opacity 1s ease-in-out;
 }
 
-/* Add styles for visible state */
+/*styles if element is visible state */
 .visible {
     opacity: 1;
 }
 
-/* Add styles for the profile picture */
+/*PROFILE PICTURE STYLES-cart.html */
 .profile-container {
-    width: 40px; /* Set the width of the container */
-    height: 40px; /* Set the height of the container */
-    border-radius: 50%; /* Make the container a circle */
-    overflow: hidden; /* Hide the overflow to create a circle */
+    width: 40px; 
+    height: 40px; 
+    border-radius: 50%; /*make the container a circle */
+    overflow: hidden; /*hide the overflow to create a circle */
 }
 
 .profile-container img {
-    width: 100%; /* Make the image fill the container */
-    height: auto; /* Maintain the aspect ratio */
-    border-radius: 50%; /* Make the image itself a circle */
+    width: 100%; 
+    height: auto; /*maintain the aspect ratio */
+    border-radius: 50%; /*make the image itself a circle */
 }
 
-/* Add or modify styles as needed */
+/*BOOKSTORE SECTION STYLES-bookstore.html*/
 .bookstore-section {
-    display: flex;
+    display: flex; /*for responsiveness*/
     overflow: hidden;
     background-color: #000000;
     padding: 20px;
     margin: 20px 50px;
     border-radius: 15px;
-    background-image: linear-gradient(
+    background-image: linear-gradient( /*downward linear gradient*/
         to bottom, #3d3d3d 40%, transparent  
     );
     transition: transform 0.3s ease-out;
 }
 
+/*bookstore section hover styles*/
 .bookstore-section:hover {
     transform: scale(1.05);
 }
 
+/*styles for the text in bookstore section*/
 .bookstore-info {
     flex: 1;
     color: white;
 }
 
+/*bookstore section image styles*/
 .bookstore-images {
     display: flex;
     align-items: center;
@@ -818,12 +819,15 @@ footer {
 svg{
     width: 25px;
 }
-/* css slider */
+
+
+/*SLIDER STYLES-explore.html (referenced from YouTube)*/
 .slider{
     height: 100vh;
     position: relative;
     color: #eee;
 }
+
 .slider .list .item{
     position: absolute;
     inset: 0 0 0 0;
@@ -831,11 +835,14 @@ svg{
     opacity: 0;
     transition: .5s;
 }
+
+/*styles for the slider to cover the area*/
 .slider .list .item img{
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
+
 .slider .list .item::after{
     content: '';
     width: 100%;
@@ -843,10 +850,11 @@ svg{
     position: absolute;
     left: 0;
     bottom: 0;
-    background-image: linear-gradient(
+    background-image: linear-gradient( /*upward linear gradient*/
         to top, #000 40%, transparent
     );
 }
+
 .slider .list .item .content{
     position: absolute;
     left: 5%;
@@ -855,18 +863,25 @@ svg{
     max-width: 80%;
     z-index: 1;
 }
+
 .slider .list .item .content p:nth-child(1){
-    text-transform: uppercase;
+    text-transform: uppercase; /*makes the text uppercase*/
     letter-spacing: 10px;
 }
+
+/*slider text styles*/
 .slider .list .item .content h2{
     font-size: 90px;
     margin: 0;
 }
+
+/*styles for active item*/
 .slider .list .item.active{
     opacity: 1;
     z-index: 10;
 }
+
+/*keyframes for the text slide in*/
 @keyframes showContent {
     to{
         transform: translateY(0);
@@ -874,6 +889,8 @@ svg{
         opacity: 1;
     }
 }
+
+/*applying the animation*/
 .slider .list .item.active p:nth-child(1),
 .slider .list .item.active h2,
 .slider .list .item.active p:nth-child(3){
@@ -882,18 +899,24 @@ svg{
     opacity: 0;
     animation: showContent .5s .7s ease-in-out 1 forwards;
 }
+
+/*slider animation settings*/
 .slider .list .item.active h2{
     animation-delay: 1s;
 }
+
 .slider .list .item.active p:nth-child(3){
     animation-duration: 1.3s;
 }
+
+/*slider arrows styles*/
 .arrows{
     position: absolute;
     top: 30%;
     right: 50px;
     z-index: 100;
 }
+
 .arrows button{
     background-color: #eee5;
     border: none;
@@ -905,10 +928,14 @@ svg{
     color: #eee;
     transition: .5s;
 }
+
+/*slider arrow hover styles*/
 .arrows button:hover{
     background-color: #eee;
     color: black;
 }
+
+/*styles for the book cover thumbnails*/
 .thumbnail{
     position: absolute;
     bottom: 50px;
@@ -922,9 +949,13 @@ svg{
     overflow: auto;
     justify-content: center;
 }
+
+/*slider scrollbar settings*/
 .thumbnail::-webkit-scrollbar{
     width: 0;
 }
+
+/*slider image styles*/
 .thumbnail .item{
     width: 150px;
     height: 220px;
@@ -932,57 +963,60 @@ svg{
     transition: .5s;
     flex-shrink: 0;
 }
+
 .thumbnail .item img{
     width: 100%;
     height: 100%;
     object-fit: cover;
     border-radius: 10px;
 }
+
 .thumbnail .item.active{
     filter: brightness(1.5);
 }
+
 .thumbnail .item .content{
     position: absolute;
     inset: auto 10px 10px 10px;
 }
-@media screen and (max-width: 678px) {
+
+/*media queries*/
+@media screen and (max-width: 678px) { /*for screen width under 678px (for the slider)*/
     .thumbnail{
-        justify-content: start;
+        justify-content: start; /*changes the thumbnails place*/
     }
     .slider .list .item .content h2{
-        font-size: 60px;
+        font-size: 50px; /*reduces font size*/
     }
     .arrows{
         top: 10%;
     }
 }
 
-/* Responsive Design */
-
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 480px) { /*for screen width under 480px (first required breakpoint)*/
     .search-bar {
-        display: none;
+        display: none; /*search bar disappears*/
     }
 
     .right-section {
-        flex-direction: column;
+        flex-direction: column; /*the nav bar becomes a column for the hamburger menu*/
         align-items: flex-end;
     }
     .image-section img{
-        display: none;
+        display: none; /*images in the image section disappears*/
     }
     
     .image-section2 img{
-        width:auto;
+        width:auto; /*images in the Harry Potter*/
         height: 100%;
     }
 
-    .back-to-top{
+    .back-to-top{ /*back to the top shifts completely to the right*/
         left:100%;
     }
 
     .newsletter-section,.image-section,.image-section2{
-        flex-direction: column;
+        flex-direction: column; /*the newsletter section and image sections become a column*/
     }
 
     .text2{
@@ -990,23 +1024,20 @@ svg{
     }
 
     .book-scroller,.bookstore-scroller{
-        margin: 0px -20px;
+        margin: 0px -20px; /*added margins for the scrollers*/
     }
+
     .footer-content{
         text-align: center;
-        flex-direction: column;
+        flex-direction: column; /*footer becomes a column*/
     }
-    .cart-items{
-        flex-direction: column;
+
+    .cart-items, .bookstore-section, .bookstore-images{
+        flex-direction: column; /*items in a cart and bookstore sections become a column*/
     }
 
     .slider{
-        height:1100px;
-    }
-
-    .bookstore-section, .bookstore-images{
-        flex-direction: column;
-
+        height:1100px; /*height of the slider increases*/
     }
 
     .bookstore-images{
@@ -1014,15 +1045,17 @@ svg{
         justify-content: center;
         margin-left: 20px;
     }
+
     .store{
         margin-bottom: 20px;
         max-width: 300px;
     }
 
     .hamburger,.toggle-menu{
-        display: block;
+        display: block; /*the hamburger menu appears*/
     }
-    nav ul{
+
+    nav ul{ /*navigation links arranged according to the hamburger menu*/
         justify-content: start;
         flex-direction: column;
         align-items: center;
@@ -1041,26 +1074,35 @@ svg{
 
 }
 
-@media only screen and (min-width: 481px) and (max-width: 1024px) {
+@media only screen and (min-width: 481px) and (max-width: 1024px) { /*for screen widths under 1024px and above 480px (second required breakpoint)*/
     .search-bar {
-        display: none;
+        display: none; /*search bar disappears*/
     }
+
+    /*styling cart.html for better user experience*/
     .cart-items{
         display: inline-flex;
     }
+
     .cart-page{
         margin: 0 50px;
 
     }
+
     .cart-item{
         width: 400px;
     }
+
     .image-section2{
-        flex-direction: column;
+        flex-direction: column; /*the Harry Potter banner becomes a column*/
     }
 
+    .image-section2 img{
+        width:60%;
+        margin-left: 160px;
+    }
     .image-section img{
-        display: none;
+        display: none; /*images in the image section disappear*/
     }
 
     .bookstore-info{
@@ -1068,20 +1110,25 @@ svg{
     }
     
 }
-@media only screen and (max-width: 650px) {
+
+@media only screen and (max-width: 650px) { /*for screen widths below 650*/
     *{
         box-sizing: border-box;
     }
 
-    .hamburger,.toggle-menu{
+    .hamburger,.toggle-menu{ /*hamburger menu appears*/
         display: block;
     }
+
+    /*hamburger menu and nav links styling*/
     .right-section input:checked ~ .menu {
         right:-50px;
     }  
+
     .right-section input:not(:checked) ~ .menu {
         display: none;
     }   
+
     nav ul{
         justify-content: start;
         flex-direction: column;
@@ -1102,7 +1149,7 @@ svg{
 
 }
 
-@media only screen and (min-width: 1025px) {
+@media only screen and (min-width: 1025px) { /*for screen widths above 1024px (third required breakpoint)*/
     nav ul {
         margin-right: 50px;
     }
